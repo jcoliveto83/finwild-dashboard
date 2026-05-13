@@ -10,8 +10,6 @@
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#F3F4F6;color:#111827;min-height:100vh}
   .app{max-width:1100px;margin:0 auto;background:#fff;min-height:100vh;display:flex;flex-direction:column}
-
-  /* HEADER */
   .hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;border-bottom:1px solid #E5E7EB;background:#fff;flex-wrap:wrap;gap:8px;position:sticky;top:0;z-index:100}
   .logo{font-size:18px;font-weight:600;color:#111827}.logo span{color:#16C784}
   .logo-sub{font-size:11px;color:#6B7280;margin-top:2px}
@@ -22,20 +20,14 @@
   select{font-size:12px;padding:6px 10px;border-radius:8px;border:1px solid #D1D5DB;background:#F9FAFB;color:#111827;cursor:pointer;max-width:200px}
   button{font-size:12px;padding:6px 12px;border-radius:8px;border:1px solid #D1D5DB;background:#F9FAFB;color:#374151;cursor:pointer;display:flex;align-items:center;gap:5px}
   button:hover{background:#E5E7EB}
-
-  /* TABS */
   .tabs{display:flex;border-bottom:1px solid #E5E7EB;background:#fff;overflow-x:auto;position:sticky;top:61px;z-index:99}
   .tab{font-size:13px;padding:10px 18px;cursor:pointer;border-bottom:2px solid transparent;color:#6B7280;white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:6px}
   .tab:hover{color:#374151;background:#F9FAFB}
   .tab.active{color:#16C784;border-bottom-color:#16C784;font-weight:500}
   .tab-panel{display:none;padding:20px 24px}
   .tab-panel.active{display:block}
-
-  /* SECTION LABEL */
   .sec{font-size:11px;font-weight:600;color:#6B7280;letter-spacing:.5px;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:6px}
   .sec::before{content:"";display:inline-block;width:3px;height:12px;background:#16C784;border-radius:2px;flex-shrink:0}
-
-  /* METRIC CARDS */
   .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
   .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
   .g2{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px}
@@ -44,76 +36,44 @@
   .mc-l{font-size:11px;color:#6B7280;margin-bottom:5px;display:flex;align-items:center;gap:5px}
   .mc-v{font-size:22px;font-weight:600;color:#111827;line-height:1.1}
   .mc-s{font-size:11px;color:#9CA3AF;margin-top:4px}
-
-  /* COLORS */
   .pos{color:#059669}.neg{color:#DC2626}
-
-  /* CARDS */
   .card{background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:16px 20px;margin-bottom:14px}
   .ct{font-size:13px;font-weight:500;color:#6B7280;margin-bottom:14px;display:flex;align-items:center;gap:6px}
-
-  /* BADGE */
   .badge{display:inline-flex;align-items:center;gap:3px;font-size:11px;padding:3px 8px;border-radius:20px;font-weight:500}
   .b-s{background:#D1FAE5;color:#065F46}.b-m{background:#FEF3C7;color:#92400E}.b-r{background:#FEE2E2;color:#991B1B}
-
-  /* LEGEND */
   .leg{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:10px;font-size:11px;color:#6B7280}
   .li{display:flex;align-items:center;gap:4px}
   .lsq{width:9px;height:9px;border-radius:2px;flex-shrink:0}
-
-  /* TRIGGERS */
   .tr-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid #F3F4F6}
   .tr-item:last-child{border-bottom:none}
   .tdot{width:8px;height:8px;border-radius:50%;margin-top:5px;flex-shrink:0}
   .dr{background:#DC2626}.dy{background:#D97706}.dg{background:#059669}.db{background:#2563EB}
-
-  /* BRECHA BARS */
   .br-row{display:flex;align-items:center;gap:10px;margin-bottom:9px}
   .br-n{font-size:12px;color:#6B7280;width:70px;flex-shrink:0}
   .br-t{flex:1;background:#F3F4F6;border-radius:4px;height:6px;overflow:hidden}
   .br-f{height:6px;border-radius:4px;transition:width .4s}
   .br-v{font-size:12px;font-weight:600;width:50px;text-align:right;flex-shrink:0}
-
-  /* TABLE */
   .mkt-tbl{width:100%;border-collapse:collapse;font-size:13px}
-  .mkt-tbl th{text-align:left;padding:8px 10px;background:#F9FAFB;color:#6B7280;font-weight:500;font-size:11px;border-bottom:1px solid #E5E7EB;position:sticky;top:0}
+  .mkt-tbl th{text-align:left;padding:8px 10px;background:#F9FAFB;color:#6B7280;font-weight:500;font-size:11px;border-bottom:1px solid #E5E7EB}
   .mkt-tbl td{padding:8px 10px;border-bottom:1px solid #F9FAFB;color:#111827}
   .mkt-tbl tr:hover td{background:#F9FAFB}
   .tbl-wrap{overflow-x:auto;border-radius:8px;border:1px solid #E5E7EB}
-
-  /* TASAS */
   .ta-r{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid #F3F4F6}
   .ta-r:last-child{border-bottom:none}
   .ta-n{font-size:13px;color:#111827;font-weight:500}
   .ta-d{font-size:11px;color:#9CA3AF}
   .ta-v{font-size:14px;font-weight:600;color:#111827}
-
-  /* CLIENT LIST */
-  .cl-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid #F9FAFB;font-size:13px}
-  .cl-row:last-child{border-bottom:none}
-  .cl-name{color:#2563EB;font-weight:500;cursor:pointer;min-width:160px}
+  .cl-name{color:#2563EB;font-weight:500;cursor:pointer}
   .cl-name:hover{text-decoration:underline}
-
-  /* SEARCH */
   .search-wrap{margin-bottom:12px}
   .search-wrap input{width:100%;font-size:13px;padding:8px 12px;border-radius:8px;border:1px solid #D1D5DB;background:#F9FAFB;color:#111827;outline:none}
   .search-wrap input:focus{border-color:#16C784;background:#fff}
-
-  /* SPINNER */
   .spin{animation:spin 1s linear infinite;display:inline-block}
   @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
   .ldg{font-size:13px;color:#9CA3AF;padding:24px;text-align:center}
-
-  /* INSIGHT BOX */
   .ins-box{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:14px;margin-bottom:12px;font-size:13px;color:#065F46;line-height:1.7}
-
-  /* UPD NOTE */
   .upd{font-size:10px;color:#9CA3AF;text-align:right;margin-top:8px}
-
-  /* ALERT BOX */
-  .alert-box{background:#FEF3C7;border:1px solid #FCD34D;border-radius:8px;padding:12px 14px;font-size:12px;color:#92400E;margin-bottom:14px;display:flex;align-items:flex-start;gap:8px}
-
-  /* FOOTER */
+  .warn-box{background:#FEF3C7;border:1px solid #FCD34D;border-radius:8px;padding:10px 14px;font-size:12px;color:#92400E;margin-bottom:14px;display:flex;align-items:center;gap:8px}
   .footer{border-top:1px solid #E5E7EB;padding:14px 24px;font-size:11px;color:#9CA3AF;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:auto}
 </style>
 </head>
@@ -127,7 +87,7 @@
   </div>
   <div class="hdr-r">
     <div class="live-dot"></div>
-    <span class="live-txt" id="updTime">Cargando...</span>
+    <span class="live-txt" id="updTime">Cargando mercado...</span>
     <select id="cs" onchange="updClient()"></select>
     <button onclick="loadAllMkt()"><i class="ti ti-refresh"></i> Actualizar mercado</button>
   </div>
@@ -142,7 +102,7 @@
   <div class="tab" onclick="showTab('clientes',this)"><i class="ti ti-users"></i> Todos los clientes</div>
 </div>
 
-<!-- TAB: CARTERA -->
+<!-- CARTERA -->
 <div id="tab-cartera" class="tab-panel active">
   <div class="g4">
     <div class="mc"><div class="mc-l"><i class="ti ti-wallet"></i> Patrimonio total</div><div class="mc-v" id="pat">—</div><div class="mc-s" id="capS">—</div></div>
@@ -150,38 +110,21 @@
     <div class="mc"><div class="mc-l"><i class="ti ti-percent"></i> Rentabilidad</div><div class="mc-v" id="rent">—</div><div class="mc-s">Estado: <span class="badge" id="est">—</span></div></div>
     <div class="mc"><div class="mc-l"><i class="ti ti-currency-dollar"></i> Exposición USD</div><div class="mc-v" id="expU">—</div><div class="mc-s" id="expS">—</div></div>
   </div>
-  <div class="card">
-    <div class="ct"><i class="ti ti-chart-line"></i> Evolución patrimonial</div>
-    <div style="position:relative;width:100%;height:180px"><canvas id="evolC"></canvas></div>
-  </div>
+  <div class="card"><div class="ct"><i class="ti ti-chart-line"></i> Evolución patrimonial</div><div style="position:relative;width:100%;height:180px"><canvas id="evolC"></canvas></div></div>
   <div class="g2">
-    <div class="card" style="margin-bottom:0">
-      <div class="ct"><i class="ti ti-chart-donut"></i> Composición de cartera</div>
-      <div class="leg" id="compLeg"></div>
-      <div style="position:relative;width:100%;height:160px"><canvas id="compC"></canvas></div>
-    </div>
-    <div class="card" style="margin-bottom:0">
-      <div class="ct"><i class="ti ti-alert-triangle"></i> Indicadores de riesgo</div>
+    <div class="card" style="margin-bottom:0"><div class="ct"><i class="ti ti-chart-donut"></i> Composición</div><div class="leg" id="compLeg"></div><div style="position:relative;width:100%;height:160px"><canvas id="compC"></canvas></div></div>
+    <div class="card" style="margin-bottom:0"><div class="ct"><i class="ti ti-alert-triangle"></i> Indicadores de riesgo</div>
       <div class="mc" style="margin-bottom:10px"><div class="mc-l">Mayor posición</div><div class="mc-v" id="rM">—</div><div class="mc-s" id="rMN">—</div></div>
-      <div class="mc" style="margin-bottom:10px"><div class="mc-l">Top 3 activos</div><div class="mc-v" id="rT3">—</div><div class="mc-s">Concentración</div></div>
-      <div class="mc"><div class="mc-l">Activos totales</div><div class="mc-v" id="rA">—</div><div class="mc-s">Diversificación</div></div>
+      <div class="mc" style="margin-bottom:10px"><div class="mc-l">Top 3 activos</div><div class="mc-v" id="rT3">—</div></div>
+      <div class="mc"><div class="mc-l">Activos totales</div><div class="mc-v" id="rA">—</div></div>
     </div>
   </div>
   <div style="margin-bottom:14px"></div>
-  <div class="card">
-    <div class="ct"><i class="ti ti-bulb" style="color:#16C784"></i> Insight Finwild</div>
-    <div class="ins-box" id="insight">—</div>
-    <button onclick="document.getElementById('insBtn').click()" id="insBtn" style="font-size:12px">Ver recomendación detallada</button>
-  </div>
-  <div class="card">
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
-      <div class="ct" style="margin:0"><i class="ti ti-bell"></i> Triggers activos</div>
-    </div>
-    <div id="triggers"></div>
-  </div>
+  <div class="card"><div class="ct"><i class="ti ti-bulb" style="color:#16C784"></i> Insight Finwild</div><div class="ins-box" id="insight">—</div><button id="insBtn">Ver recomendación detallada</button></div>
+  <div class="card"><div class="ct" style="margin-bottom:12px"><i class="ti ti-bell"></i> Triggers activos</div><div id="triggers"></div></div>
 </div>
 
-<!-- TAB: DIVISAS -->
+<!-- DIVISAS -->
 <div id="tab-divisas" class="tab-panel">
   <div class="sec"><i class="ti ti-currency-dollar"></i> Tipos de cambio — tiempo real</div>
   <div class="g4" id="gridDolar">
@@ -191,66 +134,47 @@
     <div class="mc"><div class="mc-l">CCL</div><div class="mc-v"><span class="spin"><i class="ti ti-loader"></i></span></div></div>
   </div>
   <div class="g2">
-    <div class="card" style="margin-bottom:0">
-      <div class="ct"><i class="ti ti-chart-bar"></i> Brechas cambiarias vs. oficial</div>
-      <div id="brechas"><div class="ldg"><span class="spin"><i class="ti ti-loader"></i></span> Calculando...</div></div>
-    </div>
-    <div class="card" style="margin-bottom:0">
-      <div class="ct"><i class="ti ti-trending-up"></i> Índices macro</div>
-      <div id="indices"><div class="ldg"><span class="spin"><i class="ti ti-loader"></i></span> Cargando...</div></div>
-    </div>
+    <div class="card" style="margin-bottom:0"><div class="ct"><i class="ti ti-chart-bar"></i> Brechas vs. oficial</div><div id="brechas"><div class="ldg"><span class="spin"><i class="ti ti-loader"></i></span></div></div></div>
+    <div class="card" style="margin-bottom:0"><div class="ct"><i class="ti ti-trending-up"></i> Índices macro</div><div id="indices"><div class="ldg"><span class="spin"><i class="ti ti-loader"></i></span></div></div></div>
   </div>
   <div style="margin-bottom:14px"></div>
-  <div class="card">
-    <div class="ct"><i class="ti ti-percentage"></i> Tasas e índices de referencia</div>
-    <div id="tasas"><div class="ldg"><span class="spin"><i class="ti ti-loader"></i></span> Cargando tasas...</div></div>
-    <div class="upd" id="srcNote">Fuentes: dolarapi.com · argentinadatos.com</div>
-  </div>
+  <div class="card"><div class="ct"><i class="ti ti-percentage"></i> Tasas e índices de referencia</div><div id="tasas"><div class="ldg"><span class="spin"><i class="ti ti-loader"></i></span></div></div><div class="upd" id="srcNote">Fuentes: dolarapi.com · argentinadatos.com</div></div>
 </div>
 
-<!-- TAB: ACCIONES -->
+<!-- ACCIONES -->
 <div id="tab-acciones" class="tab-panel">
-  <div class="sec"><i class="ti ti-chart-candle"></i> Panel Merval — acciones líderes · Fuente: BYMA Data</div>
+  <div class="sec"><i class="ti ti-chart-candle"></i> Panel Merval — acciones líderes · BYMA Data</div>
   <div class="search-wrap"><input type="text" id="srcAcc" placeholder="Buscar acción... ej: GGAL, YPF, PAMP" oninput="filterTable('tblAcc',this.value)"></div>
   <div class="card" style="margin-bottom:0">
-    <div id="accLoading" class="ldg"><span class="spin"><i class="ti ti-loader"></i></span> Conectando con BYMA Data...</div>
-    <div class="tbl-wrap"><table class="mkt-tbl" id="tblAcc" style="display:none">
-      <thead><tr><th>Ticker</th><th>Nombre</th><th style="text-align:right">Último</th><th style="text-align:right">Var. %</th><th style="text-align:right">Volumen</th></tr></thead>
-      <tbody id="tbodyAcc"></tbody>
-    </table></div>
+    <div id="accLoading" class="ldg"><span class="spin"><i class="ti ti-loader"></i></span> Conectando...</div>
+    <div class="tbl-wrap"><table class="mkt-tbl" id="tblAcc" style="display:none"><thead><tr><th>Ticker</th><th>Nombre</th><th style="text-align:right">Último</th><th style="text-align:right">Var. %</th><th style="text-align:right">Volumen</th></tr></thead><tbody id="tbodyAcc"></tbody></table></div>
     <div class="upd" id="updAcc"></div>
   </div>
 </div>
 
-<!-- TAB: BONOS -->
+<!-- BONOS -->
 <div id="tab-bonos" class="tab-panel">
-  <div class="sec"><i class="ti ti-building-bank"></i> Bonos soberanos — pesos y dólares · Fuente: BYMA Data</div>
+  <div class="sec"><i class="ti ti-building-bank"></i> Bonos soberanos · BYMA Data</div>
   <div class="search-wrap"><input type="text" id="srcBon" placeholder="Buscar bono... ej: AL30, GD30, AE38" oninput="filterTable('tblBon',this.value)"></div>
   <div class="card" style="margin-bottom:0">
-    <div id="bonLoading" class="ldg"><span class="spin"><i class="ti ti-loader"></i></span> Conectando con BYMA Data...</div>
-    <div class="tbl-wrap"><table class="mkt-tbl" id="tblBon" style="display:none">
-      <thead><tr><th>Ticker</th><th>Descripción</th><th style="text-align:right">Último</th><th style="text-align:right">Var. %</th><th style="text-align:right">Moneda</th></tr></thead>
-      <tbody id="tbodyBon"></tbody>
-    </table></div>
+    <div id="bonLoading" class="ldg"><span class="spin"><i class="ti ti-loader"></i></span> Conectando...</div>
+    <div class="tbl-wrap"><table class="mkt-tbl" id="tblBon" style="display:none"><thead><tr><th>Ticker</th><th>Descripción</th><th style="text-align:right">Último</th><th style="text-align:right">Var. %</th><th style="text-align:right">Moneda</th></tr></thead><tbody id="tbodyBon"></tbody></table></div>
     <div class="upd" id="updBon"></div>
   </div>
 </div>
 
-<!-- TAB: CEDEARS -->
+<!-- CEDEARS -->
 <div id="tab-cedears" class="tab-panel">
-  <div class="sec"><i class="ti ti-world"></i> CEDEARs más operados · Fuente: BYMA Data</div>
-  <div class="search-wrap"><input type="text" id="srcCed" placeholder="Buscar CEDEAR... ej: AAPL, MSFT, MELI, NVDA" oninput="filterTable('tblCed',this.value)"></div>
+  <div class="sec"><i class="ti ti-world"></i> CEDEARs más operados · BYMA Data</div>
+  <div class="search-wrap"><input type="text" id="srcCed" placeholder="Buscar CEDEAR... ej: AAPL, MSFT, MELI" oninput="filterTable('tblCed',this.value)"></div>
   <div class="card" style="margin-bottom:0">
-    <div id="cedLoading" class="ldg"><span class="spin"><i class="ti ti-loader"></i></span> Conectando con BYMA Data...</div>
-    <div class="tbl-wrap"><table class="mkt-tbl" id="tblCed" style="display:none">
-      <thead><tr><th>Ticker</th><th>Empresa</th><th style="text-align:right">Último ($)</th><th style="text-align:right">Var. %</th><th style="text-align:right">Ratio</th></tr></thead>
-      <tbody id="tbodyCed"></tbody>
-    </table></div>
+    <div id="cedLoading" class="ldg"><span class="spin"><i class="ti ti-loader"></i></span> Conectando...</div>
+    <div class="tbl-wrap"><table class="mkt-tbl" id="tblCed" style="display:none"><thead><tr><th>Ticker</th><th>Empresa</th><th style="text-align:right">Último ($)</th><th style="text-align:right">Var. %</th><th style="text-align:right">Ratio</th></tr></thead><tbody id="tbodyCed"></tbody></table></div>
     <div class="upd" id="updCed"></div>
   </div>
 </div>
 
-<!-- TAB: CLIENTES -->
+<!-- CLIENTES -->
 <div id="tab-clientes" class="tab-panel">
   <div class="sec"><i class="ti ti-users"></i> Resumen general — todos los clientes</div>
   <div class="card" style="margin-bottom:0">
@@ -263,68 +187,69 @@
 
 <div class="footer">
   <span>© 2026 Finwild S.A. — Sistema de gestión patrimonial</span>
-  <span>Fuentes: dolarapi.com · argentinadatos.com · BYMA Data</span>
+  <span id="ftrSrc">dolarapi.com · argentinadatos.com · BYMA Data</span>
+</div>
 </div>
 
-</div><!-- .app -->
-
 <script>
+// ── PROXY CORS — resuelve el bloqueo de Edge/GitHub Pages ─────
+// Usamos allorigins.win como proxy público gratuito
+// Si falla, intentamos corsproxy.io como backup
+async function proxiedGet(url) {
+  const proxies = [
+    `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+    `https://corsproxy.io/?${encodeURIComponent(url)}`,
+  ];
+  for (const proxy of proxies) {
+    try {
+      const r = await fetch(proxy, { headers: { Accept: 'application/json' } });
+      if (!r.ok) continue;
+      const text = await r.text();
+      return JSON.parse(text);
+    } catch { continue; }
+  }
+  // Último intento: directo (funciona en algunos navegadores)
+  try {
+    const r = await fetch(url, { headers: { Accept: 'application/json' } });
+    if (r.ok) return await r.json();
+  } catch {}
+  return null;
+}
+
+// ── DATOS CLIENTES ────────────────────────────────────────────
 const MESES=["Dic-25","Ene-26","Feb-26","Mar-26","Abr-26","May-26"];
 const CL=["Bonos","CEDEARs","FCI","Cash"];
 const CC=["#378ADD","#16C784","#EF9F27","#888780"];
-
 const CLT=[
-  {n:"Alejandro Ríos",cap:185000,ev:[185000,190000,195500,200000,206000,210500],comp:[45,30,15,10],mon:[85,15],mp:"28%",mpn:"AL30",t3:"65%",act:7,ins:"Cartera con concentración alta en bonos (45%). Exposición USD sólida (85%). Se recomienda diversificar hacia CEDEARs para mejorar el perfil riesgo-retorno.",trig:[{d:"dy",t:"Desbalanceo en bonos",s:"45% supera el rango ideal (40%). Evaluar migración parcial a CEDEARs."},{d:"dg",t:"Exposición USD correcta",s:"85% dolarizado. Sólida protección cambiaria."}]},
-  {n:"Beatriz Molina",cap:42000,ev:[42000,41200,40500,40000,39700,39500],comp:[60,10,10,20],mon:[55,45],mp:"38%",mpn:"GD30",t3:"72%",act:4,ins:"Cartera con resultado negativo (-6%). Alta concentración en bonos soberanos y exposición en ARS elevada (45%). Se requiere acción inmediata.",trig:[{d:"dr",t:"Resultado negativo",s:"-6% desde inicio. Revisar estrategia urgente."},{d:"dr",t:"ARS 45%",s:"Exposición en pesos muy alta. Dolarizar progresivamente."},{d:"dr",t:"Concentración crítica",s:"Top 3 activos = 72%. Diversificar."}]},
-  {n:"Carlos Vega",cap:95000,ev:[95000,98000,101000,104000,106500,108000],comp:[35,40,15,10],mon:[88,12],mp:"22%",mpn:"NVDA",t3:"58%",act:9,ins:"Excelente rendimiento (+13,7%). CEDEARs tech como driver principal. NVDA con ganancia del 18%. Evaluar toma parcial de ganancias.",trig:[{d:"db",t:"Ganancia en NVDA",s:"+18%. Evaluar toma parcial."},{d:"dg",t:"Diversificación adecuada",s:"9 activos. Riesgo distribuido."}]},
-  {n:"Criscione Maquinarias S.A.",cap:20082929,ev:[20082929,20082929,20082929,20082929,20082929,20082929],comp:[91,0,0,9],mon:[99,1],mp:"91%",mpn:"YM41O – ON YPF",t3:"91%",act:3,ins:"Concentración crítica: 91% en ON YPF CL.41 (YM41O). Vencimiento 08/01/2027. Es el momento ideal para planificar la reinversión del capital antes del vencimiento.",trig:[{d:"dr",t:"Concentración crítica",s:"91% en un único activo. Riesgo crediticio corporativo."},{d:"dy",t:"Vencimiento 08/01/2027",s:"10 meses restantes. Planificar reinversión."},{d:"dy",t:"Cash ocioso",s:"USD 1.132 disponibles sin rendir."}]},
-  {n:"Diana Suárez",cap:28000,ev:[28000,28800,29500,30100,30700,31200],comp:[30,35,20,15],mon:[78,22],mp:"20%",mpn:"AAPL",t3:"55%",act:6,ins:"Crecimiento constante +11,4%. Buena diversificación entre tipos de activo. Exposición USD adecuada. Sin acciones urgentes.",trig:[{d:"dg",t:"Evolución positiva sostenida",s:"+11,4% en 6 meses."},{d:"dy",t:"Cash 15%",s:"Evaluar reinvertir el exceso de liquidez."}]},
-  {n:"Eduardo Herrera",cap:120000,ev:[120000,124000,128000,132000,135000,138000],comp:[25,45,20,10],mon:[90,10],mp:"25%",mpn:"MSFT",t3:"60%",act:8,ins:"Excelente performance +15%. Dolarización muy alta (90%). CEDEARs bien posicionados. Mantener estrategia actual.",trig:[{d:"db",t:"Ganancia en MSFT",s:"+14%. Evaluar toma parcial."},{d:"dg",t:"USD óptimo",s:"90% dolarizado. Protección máxima."}]},
-  {n:"Fernanda Castro",cap:67000,ev:[67000,68000,69000,70000,70800,71500],comp:[40,30,18,12],mon:[80,20],mp:"24%",mpn:"AL30",t3:"57%",act:7,ins:"Cartera estable con crecimiento moderado +6,7%. Composición equilibrada. Sin alertas urgentes.",trig:[{d:"dg",t:"Cartera equilibrada",s:"Distribución dentro de rangos ideales."},{d:"dy",t:"Cash 12%",s:"Oportunidad de reinversión próxima."}]},
-  {n:"Gabriel Romero",cap:15000,ev:[15000,14600,14300,14000,13900,13800],comp:[55,10,15,20],mon:[50,50],mp:"32%",mpn:"GD35",t3:"68%",act:5,ins:"Cartera en terreno negativo (-8%). Alta concentración en bonos y ARS del 50% en contexto inflacionario. Requiere reestructuración urgente.",trig:[{d:"dr",t:"Resultado -8%",s:"Cartera perdiendo valor. Revisar estrategia."},{d:"dr",t:"ARS 50%",s:"Mitad del portafolio en pesos. Dolarizar."},{d:"dr",t:"Concentración alta",s:"Top 3 = 68%."}]},
-  {n:"Horacio Blanco",cap:250000,ev:[250000,258000,266000,273000,280000,287000],comp:[30,42,18,10],mon:[92,8],mp:"20%",mpn:"GOOGL",t3:"52%",act:11,ins:"Performance premium +14,8%. Dolarización excelente (92%). CEDEARs tech diversificados. Cartera modelo. Mantener.",trig:[{d:"dg",t:"Performance excelente",s:"+14,8% sostenido."},{d:"db",t:"Ganancia en GOOGL",s:"+16%. Evaluar toma parcial."},{d:"dg",t:"Diversificación alta",s:"11 activos. Riesgo muy distribuido."}]},
-  {n:"Inés Pereyra",cap:33000,ev:[33000,33500,34000,34600,35200,35800],comp:[38,28,22,12],mon:[75,25],mp:"21%",mpn:"AE38",t3:"56%",act:6,ins:"Crecimiento sólido +8,5%. Bien diversificada. ARS levemente alta (25%). Considerar dolarizar progresivamente.",trig:[{d:"dy",t:"ARS 25%",s:"Evaluar reducir exposición en pesos."},{d:"dg",t:"Tendencia positiva",s:"6 meses consecutivos en alza."}]},
-  {n:"Javier Orellana",cap:78000,ev:[78000,79500,80800,82000,83200,84500],comp:[42,32,16,10],mon:[82,18],mp:"26%",mpn:"AL30",t3:"62%",act:7,ins:"Cartera sólida +8,3%. Bonos levemente sobre el rango ideal (42%). Pequeño ajuste recomendado hacia CEDEARs.",trig:[{d:"dy",t:"Bonos 42%",s:"Rango ideal máximo: 40%. Ajuste mínimo."},{d:"dg",t:"USD correcto",s:"82% dolarizado."}]},
-  {n:"Karina Mendoza",cap:19000,ev:[19000,19300,19600,20000,20400,20800],comp:[28,38,20,14],mon:[72,28],mp:"19%",mpn:"AMZN",t3:"50%",act:5,ins:"Buen rendimiento +9,5%. CEDEARs como driver principal. ARS algo elevada (28%). Considerar dolarizar cash.",trig:[{d:"dy",t:"ARS 28%",s:"Por encima del ideal. Dolarizar."},{d:"dg",t:"CEDEARs sólidos",s:"AMZN, AAPL, MSFT bien posicionados."}]},
-  {n:"Lucas Ferrara",cap:145000,ev:[145000,149000,153000,156000,159000,162000],comp:[35,38,17,10],mon:[87,13],mp:"22%",mpn:"META",t3:"57%",act:9,ins:"Excelente +11,7%. Alta dolarización (87%). META con +19%. CEDEARs tech bien posicionados. Mantener.",trig:[{d:"db",t:"Ganancia en META",s:"+19%. Evaluar toma parcial."},{d:"dg",t:"Cartera equilibrada",s:"Distribución óptima."}]},
-  {n:"Marcela Sosa",cap:52000,ev:[52000,52800,53500,54200,54900,55600],comp:[32,35,22,11],mon:[78,22],mp:"20%",mpn:"FCI Renta",t3:"53%",act:7,ins:"Crecimiento estable +6,9%. Bien diversificada. Exposición USD adecuada. Sin alertas urgentes.",trig:[{d:"dg",t:"Diversificación correcta",s:"7 activos. Riesgo bien distribuido."},{d:"dy",t:"Cash 11%",s:"Posible oportunidad de reinversión."}]},
-  {n:"Nicolás Aguirre",cap:88000,ev:[88000,90000,92000,94000,95500,97000],comp:[38,34,18,10],mon:[83,17],mp:"23%",mpn:"GGAL",t3:"59%",act:8,ins:"Buen rendimiento +10,2%. GGAL con suba del 21%. USD sólido (83%). Evaluar toma parcial en acciones locales.",trig:[{d:"db",t:"Ganancia en GGAL",s:"+21%. Evaluar toma parcial."},{d:"dg",t:"USD sólido",s:"83% dolarizado."}]},
-  {n:"Olivia Paredes",cap:61000,ev:[61000,62000,62800,63600,64500,65400],comp:[36,32,20,12],mon:[80,20],mp:"21%",mpn:"AL41",t3:"54%",act:6,ins:"Cartera estable +7,2%. Sin alertas urgentes. Composición dentro de rangos ideales. Mantener.",trig:[{d:"dg",t:"Cartera sólida",s:"Sin desbalanceos detectados."},{d:"dy",t:"Cash 12%",s:"Posible reinversión próximo mes."}]},
-  {n:"Pablo Giménez",cap:175000,ev:[175000,179000,183000,188000,192000,196000],comp:[33,40,18,9],mon:[89,11],mp:"22%",mpn:"NVDA",t3:"56%",act:10,ins:"Excelente +12%. Dolarización alta (89%). NVDA con +22%. Evaluar toma parcial de la posición más grande.",trig:[{d:"db",t:"Ganancia en NVDA",s:"+22%. Toma parcial recomendada."},{d:"dg",t:"Dolarización alta",s:"89% USD. Máxima protección."}]},
-  {n:"Quimey Torres",cap:22000,ev:[22000,22400,22800,23200,23700,24100],comp:[30,35,25,10],mon:[73,27],mp:"19%",mpn:"FCI Mixto",t3:"51%",act:5,ins:"Buen rendimiento +9,5%. Diversificación adecuada para el tamaño de cartera. ARS levemente alta (27%).",trig:[{d:"dy",t:"ARS 27%",s:"Dolarizar progresivamente."},{d:"dg",t:"Rendimiento positivo",s:"+9,5% sostenido."}]},
-  {n:"Roberto Valdez",cap:110000,ev:[110000,113000,116000,118500,121000,123000],comp:[37,36,17,10],mon:[85,15],mp:"23%",mpn:"GD30",t3:"58%",act:8,ins:"Muy buen rendimiento +11,8%. Composición equilibrada. Alta dolarización. Sin acciones urgentes. Mantener.",trig:[{d:"dg",t:"Performance sólida",s:"+11,8% sostenido."},{d:"dg",t:"Cartera equilibrada",s:"Dentro de rangos óptimos."}]},
-  {n:"Sofía Navarro",cap:47000,ev:[47000,47800,48500,49200,50000,50800],comp:[34,33,21,12],mon:[77,23],mp:"20%",mpn:"BBAR",t3:"53%",act:7,ins:"Buen crecimiento +8,1%. BBAR con suba del 17%. ARS algo elevada (23%). Evaluar reducir posición en pesos.",trig:[{d:"dy",t:"ARS 23%",s:"Reducir exposición progresivamente."},{d:"db",t:"Ganancia en BBAR",s:"+17%. Considerar toma parcial."}]},
-  {n:"Tomás Ibáñez",cap:38000,ev:[38000,38800,39500,40100,40800,41500],comp:[31,36,21,12],mon:[79,21],mp:"21%",mpn:"YPF",t3:"55%",act:6,ins:"Crecimiento estable +9,2%. Sin alertas urgentes. Composición equilibrada. Mantener.",trig:[{d:"dg",t:"Evolución positiva",s:"6 meses consecutivos en alza."},{d:"dy",t:"Cash 12%",s:"Posible reinversión próxima."}]},
+  {n:"Alejandro Ríos",cap:185000,ev:[185000,190000,195500,200000,206000,210500],comp:[45,30,15,10],mon:[85,15],mp:"28%",mpn:"AL30",t3:"65%",act:7,ins:"Concentración alta en bonos (45%). USD sólido (85%). Diversificar hacia CEDEARs.",trig:[{d:"dy",t:"Desbalanceo bonos",s:"45% supera el rango ideal. Evaluar CEDEARs."},{d:"dg",t:"USD correcto",s:"85% dolarizado."}]},
+  {n:"Beatriz Molina",cap:42000,ev:[42000,41200,40500,40000,39700,39500],comp:[60,10,10,20],mon:[55,45],mp:"38%",mpn:"GD30",t3:"72%",act:4,ins:"Resultado negativo -6%. Concentración y ARS elevado. Acción inmediata.",trig:[{d:"dr",t:"Resultado negativo",s:"-6% desde inicio."},{d:"dr",t:"ARS 45%",s:"Dolarizar urgente."},{d:"dr",t:"Concentración crítica",s:"Top 3 = 72%."}]},
+  {n:"Carlos Vega",cap:95000,ev:[95000,98000,101000,104000,106500,108000],comp:[35,40,15,10],mon:[88,12],mp:"22%",mpn:"NVDA",t3:"58%",act:9,ins:"CEDEARs tech lideran. NVDA +18%. Evaluar toma parcial.",trig:[{d:"db",t:"Ganancia NVDA",s:"+18%."},{d:"dg",t:"Diversificación ok",s:"9 activos."}]},
+  {n:"Criscione Maquinarias S.A.",cap:20082929,ev:[20082929,20082929,20082929,20082929,20082929,20082929],comp:[91,0,0,9],mon:[99,1],mp:"91%",mpn:"YM41O – ON YPF",t3:"91%",act:3,ins:"91% en ON YPF CL.41. Vencimiento 08/01/2027. Planificar reinversión urgente.",trig:[{d:"dr",t:"Concentración crítica",s:"91% en un activo."},{d:"dy",t:"Vencimiento 08/01/2027",s:"10 meses. Planificar."},{d:"dy",t:"Cash ocioso",s:"USD 1.132 sin rendir."}]},
+  {n:"Diana Suárez",cap:28000,ev:[28000,28800,29500,30100,30700,31200],comp:[30,35,20,15],mon:[78,22],mp:"20%",mpn:"AAPL",t3:"55%",act:6,ins:"+11,4%. Buena diversificación. Sin alertas urgentes.",trig:[{d:"dg",t:"Evolución positiva",s:"+11,4%."},{d:"dy",t:"Cash 15%",s:"Evaluar reinvertir."}]},
+  {n:"Eduardo Herrera",cap:120000,ev:[120000,124000,128000,132000,135000,138000],comp:[25,45,20,10],mon:[90,10],mp:"25%",mpn:"MSFT",t3:"60%",act:8,ins:"+15%. USD 90%. Mantener.",trig:[{d:"db",t:"Ganancia MSFT",s:"+14%."},{d:"dg",t:"USD óptimo",s:"90%."}]},
+  {n:"Fernanda Castro",cap:67000,ev:[67000,68000,69000,70000,70800,71500],comp:[40,30,18,12],mon:[80,20],mp:"24%",mpn:"AL30",t3:"57%",act:7,ins:"+6,7%. Composición equilibrada.",trig:[{d:"dg",t:"Equilibrio correcto",s:"Dentro de rangos."},{d:"dy",t:"Cash 12%",s:"Posible reinversión."}]},
+  {n:"Gabriel Romero",cap:15000,ev:[15000,14600,14300,14000,13900,13800],comp:[55,10,15,20],mon:[50,50],mp:"32%",mpn:"GD35",t3:"68%",act:5,ins:"-8%. ARS 50%. Reestructuración urgente.",trig:[{d:"dr",t:"Resultado -8%",s:"Revisar estrategia."},{d:"dr",t:"ARS 50%",s:"Dolarizar."},{d:"dr",t:"Concentración alta",s:"Top 3 = 68%."}]},
+  {n:"Horacio Blanco",cap:250000,ev:[250000,258000,266000,273000,280000,287000],comp:[30,42,18,10],mon:[92,8],mp:"20%",mpn:"GOOGL",t3:"52%",act:11,ins:"+14,8%. Dolarización excelente. Mantener.",trig:[{d:"dg",t:"Performance excelente",s:"+14,8%."},{d:"db",t:"Ganancia GOOGL",s:"+16%."}]},
+  {n:"Inés Pereyra",cap:33000,ev:[33000,33500,34000,34600,35200,35800],comp:[38,28,22,12],mon:[75,25],mp:"21%",mpn:"AE38",t3:"56%",act:6,ins:"+8,5%. Bien diversificada. Reducir ARS.",trig:[{d:"dy",t:"ARS 25%",s:"Evaluar dolarizar."},{d:"dg",t:"Tendencia positiva",s:"6 meses en alza."}]},
+  {n:"Javier Orellana",cap:78000,ev:[78000,79500,80800,82000,83200,84500],comp:[42,32,16,10],mon:[82,18],mp:"26%",mpn:"AL30",t3:"62%",act:7,ins:"+8,3%. Bonos levemente altos.",trig:[{d:"dy",t:"Bonos 42%",s:"Rango ideal 40%."},{d:"dg",t:"USD correcto",s:"82%."}]},
+  {n:"Karina Mendoza",cap:19000,ev:[19000,19300,19600,20000,20400,20800],comp:[28,38,20,14],mon:[72,28],mp:"19%",mpn:"AMZN",t3:"50%",act:5,ins:"+9,5%. ARS algo alta.",trig:[{d:"dy",t:"ARS 28%",s:"Dolarizar."},{d:"dg",t:"CEDEARs sólidos",s:"AMZN, AAPL, MSFT."}]},
+  {n:"Lucas Ferrara",cap:145000,ev:[145000,149000,153000,156000,159000,162000],comp:[35,38,17,10],mon:[87,13],mp:"22%",mpn:"META",t3:"57%",act:9,ins:"+11,7%. Alta dolarización. META +19%.",trig:[{d:"db",t:"Ganancia META",s:"+19%."},{d:"dg",t:"Cartera equilibrada",s:"Mantener."}]},
+  {n:"Marcela Sosa",cap:52000,ev:[52000,52800,53500,54200,54900,55600],comp:[32,35,22,11],mon:[78,22],mp:"20%",mpn:"FCI Renta",t3:"53%",act:7,ins:"+6,9%. Bien diversificada.",trig:[{d:"dg",t:"Diversificación correcta",s:"7 activos."},{d:"dy",t:"Cash 11%",s:"Evaluar reinversión."}]},
+  {n:"Nicolás Aguirre",cap:88000,ev:[88000,90000,92000,94000,95500,97000],comp:[38,34,18,10],mon:[83,17],mp:"23%",mpn:"GGAL",t3:"59%",act:8,ins:"+10,2%. GGAL +21%.",trig:[{d:"db",t:"Ganancia GGAL",s:"+21%."},{d:"dg",t:"USD sólido",s:"83%."}]},
+  {n:"Olivia Paredes",cap:61000,ev:[61000,62000,62800,63600,64500,65400],comp:[36,32,20,12],mon:[80,20],mp:"21%",mpn:"AL41",t3:"54%",act:6,ins:"+7,2%. Sin alertas urgentes.",trig:[{d:"dg",t:"Cartera sólida",s:"Sin desbalanceos."},{d:"dy",t:"Cash 12%",s:"Posible reinversión."}]},
+  {n:"Pablo Giménez",cap:175000,ev:[175000,179000,183000,188000,192000,196000],comp:[33,40,18,9],mon:[89,11],mp:"22%",mpn:"NVDA",t3:"56%",act:10,ins:"+12%. Dolarización 89%. NVDA +22%.",trig:[{d:"db",t:"Ganancia NVDA",s:"+22%."},{d:"dg",t:"Dolarización alta",s:"89%."}]},
+  {n:"Quimey Torres",cap:22000,ev:[22000,22400,22800,23200,23700,24100],comp:[30,35,25,10],mon:[73,27],mp:"19%",mpn:"FCI Mixto",t3:"51%",act:5,ins:"+9,5%. ARS levemente alta.",trig:[{d:"dy",t:"ARS 27%",s:"Dolarizar progresivamente."},{d:"dg",t:"+9,5%",s:"Buen ritmo."}]},
+  {n:"Roberto Valdez",cap:110000,ev:[110000,113000,116000,118500,121000,123000],comp:[37,36,17,10],mon:[85,15],mp:"23%",mpn:"GD30",t3:"58%",act:8,ins:"+11,8%. Composición equilibrada.",trig:[{d:"dg",t:"Performance sólida",s:"+11,8%."},{d:"dg",t:"Cartera equilibrada",s:"Rangos óptimos."}]},
+  {n:"Sofía Navarro",cap:47000,ev:[47000,47800,48500,49200,50000,50800],comp:[34,33,21,12],mon:[77,23],mp:"20%",mpn:"BBAR",t3:"53%",act:7,ins:"+8,1%. BBAR +17%.",trig:[{d:"dy",t:"ARS 23%",s:"Reducir."},{d:"db",t:"Ganancia BBAR",s:"+17%."}]},
+  {n:"Tomás Ibáñez",cap:38000,ev:[38000,38800,39500,40100,40800,41500],comp:[31,36,21,12],mon:[79,21],mp:"21%",mpn:"YPF",t3:"55%",act:6,ins:"+9,2%. Estable.",trig:[{d:"dg",t:"Evolución positiva",s:"6 meses en alza."},{d:"dy",t:"Cash 12%",s:"Posible reinversión."}]},
 ];
-
-const CEDEARS_REF=[
-  {t:"AAPL",n:"Apple Inc.",r:"10:1"},{t:"MSFT",n:"Microsoft Corp.",r:"10:1"},
-  {t:"GOOGL",n:"Alphabet Inc.",r:"10:1"},{t:"AMZN",n:"Amazon.com",r:"20:1"},
-  {t:"NVDA",n:"NVIDIA Corp.",r:"10:1"},{t:"META",n:"Meta Platforms",r:"10:1"},
-  {t:"MELI",n:"MercadoLibre",r:"1:1"},{t:"TSLA",n:"Tesla Inc.",r:"10:1"},
-  {t:"VIST",n:"Vista Energy",r:"1:1"},{t:"GLOB",n:"Globant S.A.",r:"1:1"},
-  {t:"DESP",n:"Despegar.com",r:"1:1"},{t:"BRKB",n:"Berkshire B",r:"10:1"},
-];
-const BONOS_REF=[
-  {t:"AL30",n:"Bono USD 2030 Ley Arg.",m:"USD"},{t:"GD30",n:"Global USD 2030 Ley Ext.",m:"USD"},
-  {t:"AE38",n:"Bono USD 2038 Ley Arg.",m:"USD"},{t:"GD35",n:"Global USD 2035 Ley Ext.",m:"USD"},
-  {t:"AL35",n:"Bono USD 2035 Ley Arg.",m:"USD"},{t:"AL41",n:"Bono USD 2041 Ley Arg.",m:"USD"},
-  {t:"GD41",n:"Global USD 2041 Ley Ext.",m:"USD"},{t:"AL29",n:"Bono USD 2029 Ley Arg.",m:"USD"},
-  {t:"DICP",n:"Discount $ Ley Arg. 2033",m:"ARS"},{t:"PARP",n:"Par $ Ley Arg. 2038",m:"ARS"},
-];
-const ACCIONES_REF=[
-  {t:"GGAL",n:"Grupo Galicia"},{t:"YPF",n:"YPF S.A."},{t:"PAMP",n:"Pampa Energía"},
-  {t:"BBAR",n:"BBVA Argentina"},{t:"BMA",n:"Banco Macro"},{t:"TXAR",n:"Ternium Argentina"},
-  {t:"ALUA",n:"Aluar"},{t:"CEPU",n:"Central Puerto"},{t:"COME",n:"Soc. Comercial Plata"},
-  {t:"TECO2",n:"Telecom Argentina"},{t:"TGSU2",n:"Transportadora Gas Sur"},
-  {t:"VALO",n:"Grupo Valores"},{t:"SUPV",n:"Grupo Supervielle"},
-  {t:"LOMA",n:"Loma Negra"},{t:"EDN",n:"Edenor"},
-];
+const CEDEARS_REF=[{t:"AAPL",n:"Apple Inc.",r:"10:1"},{t:"MSFT",n:"Microsoft",r:"10:1"},{t:"GOOGL",n:"Alphabet",r:"10:1"},{t:"AMZN",n:"Amazon",r:"20:1"},{t:"NVDA",n:"NVIDIA",r:"10:1"},{t:"META",n:"Meta Platforms",r:"10:1"},{t:"MELI",n:"MercadoLibre",r:"1:1"},{t:"TSLA",n:"Tesla",r:"10:1"},{t:"VIST",n:"Vista Energy",r:"1:1"},{t:"GLOB",n:"Globant",r:"1:1"},{t:"DESP",n:"Despegar",r:"1:1"},{t:"BRKB",n:"Berkshire B",r:"10:1"}];
+const BONOS_REF=[{t:"AL30",n:"Bono USD 2030 Ley Arg.",m:"USD"},{t:"GD30",n:"Global USD 2030 Ley Ext.",m:"USD"},{t:"AE38",n:"Bono USD 2038 Ley Arg.",m:"USD"},{t:"GD35",n:"Global USD 2035",m:"USD"},{t:"AL35",n:"Bono USD 2035 Ley Arg.",m:"USD"},{t:"AL41",n:"Bono USD 2041 Ley Arg.",m:"USD"},{t:"GD41",n:"Global USD 2041",m:"USD"},{t:"AL29",n:"Bono USD 2029 Ley Arg.",m:"USD"},{t:"DICP",n:"Discount $ 2033",m:"ARS"},{t:"PARP",n:"Par $ 2038",m:"ARS"}];
+const ACCIONES_REF=[{t:"GGAL",n:"Grupo Galicia"},{t:"YPF",n:"YPF S.A."},{t:"PAMP",n:"Pampa Energía"},{t:"BBAR",n:"BBVA Argentina"},{t:"BMA",n:"Banco Macro"},{t:"TXAR",n:"Ternium Argentina"},{t:"ALUA",n:"Aluar"},{t:"CEPU",n:"Central Puerto"},{t:"COME",n:"Soc. Comercial Plata"},{t:"TECO2",n:"Telecom Argentina"},{t:"TGSU2",n:"Transp. Gas Sur"},{t:"VALO",n:"Grupo Valores"},{t:"SUPV",n:"Grupo Supervielle"},{t:"LOMA",n:"Loma Negra"},{t:"EDN",n:"Edenor"}];
 
 const fmt=(n,d=0)=>n==null?'—':Number(n).toLocaleString('es-AR',{minimumFractionDigits:d,maximumFractionDigits:d});
 const fmtP=(n,d=1)=>n==null?'—':(n>0?'+':'')+Number(n).toFixed(d)+'%';
 const varColor=v=>v==null?'#6B7280':v>0?'#059669':'#DC2626';
-
 let eI,cI;
 
 function showTab(id,el){
@@ -333,11 +258,9 @@ function showTab(id,el){
   document.getElementById('tab-'+id).classList.add('active');
   el.classList.add('active');
 }
-
 function buildLeg(id,labels,colors,data){
   document.getElementById(id).innerHTML=labels.map((l,i)=>`<span class="li"><span class="lsq" style="background:${colors[i]}"></span>${l} ${data[i]}%</span>`).join('');
 }
-
 function updClient(){
   const i=parseInt(document.getElementById('cs').value);
   const c=CLT[i];
@@ -346,162 +269,53 @@ function updClient(){
   const rp=((pat/c.cap)-1)*100;
   const pos=res>=0;
   const estado=rp>10?'Sólida':rp>0?'Moderada':'Riesgosa';
-  const bc=estado==='Sólida'?'b-s':estado==='Moderada'?'b-m':'b-r';
-  const icon=estado==='Sólida'?'🟢':estado==='Moderada'?'🟡':'🔴';
   document.getElementById('pat').textContent='USD '+fmt(pat);
-  const re=document.getElementById('res');
-  re.textContent=(pos?'+ ':'- ')+'USD '+fmt(Math.abs(res));
-  re.className='mc-v '+(pos?'pos':'neg');
-  const rn=document.getElementById('rent');
-  rn.textContent=fmtP(rp);
-  rn.className='mc-v '+(pos?'pos':'neg');
+  const re=document.getElementById('res');re.textContent=(pos?'+ ':'- ')+'USD '+fmt(Math.abs(res));re.className='mc-v '+(pos?'pos':'neg');
+  const rn=document.getElementById('rent');rn.textContent=fmtP(rp);rn.className='mc-v '+(pos?'pos':'neg');
   document.getElementById('capS').textContent='Capital inicial: USD '+fmt(c.cap);
   document.getElementById('expU').textContent=c.mon[0]+'%';
   document.getElementById('expU').className='mc-v '+(c.mon[0]>=75?'pos':c.mon[0]>=50?'':'neg');
   document.getElementById('expS').textContent='Exposición ARS: '+c.mon[1]+'%';
   const eb=document.getElementById('est');
-  eb.textContent=icon+' '+estado;
-  eb.className='badge '+bc;
-  document.getElementById('rM').textContent=c.mp;
-  document.getElementById('rMN').textContent=c.mpn;
-  document.getElementById('rT3').textContent=c.t3;
-  document.getElementById('rA').textContent=c.act;
+  eb.textContent=(estado==='Sólida'?'🟢':estado==='Moderada'?'🟡':'🔴')+' '+estado;
+  eb.className='badge '+(estado==='Sólida'?'b-s':estado==='Moderada'?'b-m':'b-r');
+  document.getElementById('rM').textContent=c.mp;document.getElementById('rMN').textContent=c.mpn;
+  document.getElementById('rT3').textContent=c.t3;document.getElementById('rA').textContent=c.act;
   document.getElementById('insight').textContent=c.ins;
-  document.getElementById('insBtn').onclick=()=>alert('Recomendación para '+c.n+':\n\n'+c.ins+'\n\nContactar al cliente para avanzar en los ajustes recomendados.');
+  document.getElementById('insBtn').onclick=()=>alert('Recomendación para '+c.n+':\n\n'+c.ins);
   document.getElementById('triggers').innerHTML=c.trig.map(t=>`<div class="tr-item"><div class="tdot ${t.d}"></div><div><div style="font-size:13px;color:#111827;font-weight:500">${t.t}</div><div style="font-size:12px;color:#6B7280;margin-top:2px">${t.s}</div></div></div>`).join('');
-  if(eI)eI.destroy();
-  if(cI)cI.destroy();
-  eI=new Chart(document.getElementById('evolC'),{
-    type:'line',
-    data:{labels:MESES,datasets:[{label:'Patrimonio',data:c.ev,borderColor:'#16C784',backgroundColor:'rgba(22,199,132,0.08)',fill:true,tension:0.4,pointBackgroundColor:'#16C784',pointRadius:4,borderWidth:2}]},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
-      scales:{x:{grid:{display:false},ticks:{color:'#9CA3AF',font:{size:11}}},
-              y:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{color:'#9CA3AF',font:{size:10},callback:v=>'$'+(v/1000).toFixed(0)+'K'}}}}
-  });
+  if(eI)eI.destroy();if(cI)cI.destroy();
+  eI=new Chart(document.getElementById('evolC'),{type:'line',data:{labels:MESES,datasets:[{label:'Patrimonio',data:c.ev,borderColor:'#16C784',backgroundColor:'rgba(22,199,132,0.08)',fill:true,tension:0.4,pointBackgroundColor:'#16C784',pointRadius:4,borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{color:'#9CA3AF',font:{size:11}}},y:{grid:{color:'rgba(0,0,0,0.04)'},ticks:{color:'#9CA3AF',font:{size:10},callback:v=>'$'+(v/1000).toFixed(0)+'K'}}}}});
   buildLeg('compLeg',CL,CC,c.comp);
-  cI=new Chart(document.getElementById('compC'),{
-    type:'doughnut',
-    data:{labels:CL,datasets:[{data:c.comp,backgroundColor:CC,borderWidth:3,borderColor:'#ffffff'}]},
-    options:{responsive:true,maintainAspectRatio:false,cutout:'65%',plugins:{legend:{display:false}}}
-  });
+  cI=new Chart(document.getElementById('compC'),{type:'doughnut',data:{labels:CL,datasets:[{data:c.comp,backgroundColor:CC,borderWidth:3,borderColor:'#fff'}]},options:{responsive:true,maintainAspectRatio:false,cutout:'65%',plugins:{legend:{display:false}}}});
 }
-
 function buildClientTbl(){
   document.getElementById('clientTbl').innerHTML=CLT.map((c,i)=>{
-    const pat=c.ev[c.ev.length-1];
-    const rp=((pat/c.cap)-1)*100;
-    const pos=rp>=0;
+    const pat=c.ev[c.ev.length-1];const rp=((pat/c.cap)-1)*100;const pos=rp>=0;
     const estado=rp>10?'🟢 Sólida':rp>0?'🟡 Moderada':'🔴 Riesgosa';
-    return`<tr>
-      <td><span class="cl-name" onclick="document.getElementById('cs').value=${i};updClient();showTab('cartera',document.querySelector('.tab'))">${c.n}</span></td>
-      <td style="text-align:right;font-weight:600">USD ${fmt(pat)}</td>
-      <td style="text-align:right;color:#6B7280">USD ${fmt(c.cap)}</td>
-      <td style="text-align:right;color:${pos?'#059669':'#DC2626'};font-weight:600">${fmtP(rp)}</td>
-      <td style="text-align:right;font-size:12px">${estado}</td>
-    </tr>`;
+    return`<tr><td><span class="cl-name" onclick="document.getElementById('cs').value=${i};updClient();showTab('cartera',document.querySelector('.tab'))">${c.n}</span></td><td style="text-align:right;font-weight:600">USD ${fmt(pat)}</td><td style="text-align:right;color:#6B7280">USD ${fmt(c.cap)}</td><td style="text-align:right;color:${pos?'#059669':'#DC2626'};font-weight:600">${fmtP(rp)}</td><td style="text-align:right;font-size:12px">${estado}</td></tr>`;
   }).join('');
 }
-
-async function safeGet(url){
-  try{const r=await fetch(url,{headers:{Accept:'application/json'}});if(!r.ok)throw 0;return await r.json();}catch{return null;}
-}
-
 function buildTbl(tbodyId,tblId,ldgId,rows){
   document.getElementById(ldgId).style.display='none';
   document.getElementById(tblId).style.display='table';
   document.getElementById(tbodyId).innerHTML=rows;
 }
-
 function filterTable(tblId,q){
-  const rows=document.querySelectorAll('#'+tblId+' tbody tr');
-  const lq=q.toLowerCase();
-  rows.forEach(r=>{r.style.display=r.textContent.toLowerCase().includes(lq)?'':'none';});
+  document.querySelectorAll('#'+tblId+' tbody tr').forEach(r=>{r.style.display=r.textContent.toLowerCase().includes(q.toLowerCase())?'':'none';});
 }
 
-async function loadAcciones(){
-  document.getElementById('accLoading').style.display='block';
-  document.getElementById('tblAcc').style.display='none';
-  const data=await safeGet('https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/seriesHistoricas/panelLider');
-  const now=new Date();
-  document.getElementById('updAcc').textContent='BYMA Data · '+now.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
-  if(data&&Array.isArray(data)&&data.length){
-    const rows=data.slice(0,25).map(d=>{
-      const v=d.variacionPorcentual??d.variation??null;
-      const p=d.ultimoPrecio??d.price??d.last??null;
-      const vol=d.volumen??d.volume??null;
-      const sym=d.simbolo??d.symbol??'—';
-      const desc=d.descripcion??d.description??ACCIONES_REF.find(a=>a.t===sym)?.n??'—';
-      return`<tr><td><strong>${sym}</strong></td><td style="color:#6B7280">${desc}</td><td style="text-align:right">$${fmt(p)}</td><td style="text-align:right;color:${varColor(v)};font-weight:600">${fmtP(v)}</td><td style="text-align:right;color:#9CA3AF">${vol?fmt(vol):'—'}</td></tr>`;
-    }).join('');
-    buildTbl('tbodyAcc','tblAcc','accLoading',rows);
-  } else {
-    const rows=ACCIONES_REF.map(a=>`<tr><td><strong>${a.t}</strong></td><td style="color:#6B7280">${a.n}</td><td style="text-align:right;color:#D1D5DB">—</td><td style="text-align:right;color:#D1D5DB">—</td><td style="text-align:right;color:#D1D5DB">—</td></tr>`).join('');
-    buildTbl('tbodyAcc','tblAcc','accLoading',rows);
-    document.getElementById('updAcc').textContent='BYMA Data no disponible en este momento · Tickers de referencia · '+now.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
-  }
-}
-
-async function loadBonos(){
-  document.getElementById('bonLoading').style.display='block';
-  document.getElementById('tblBon').style.display='none';
-  const data=await safeGet('https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/seriesHistoricas/bonos-publicos');
-  const now=new Date();
-  document.getElementById('updBon').textContent='BYMA Data · '+now.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
-  if(data&&Array.isArray(data)&&data.length){
-    const rows=data.slice(0,20).map(d=>{
-      const v=d.variacionPorcentual??d.variation??null;
-      const p=d.ultimoPrecio??d.price??d.last??null;
-      const sym=d.simbolo??d.symbol??'—';
-      const desc=d.descripcion??d.description??BONOS_REF.find(b=>b.t===sym)?.n??'—';
-      const mon=d.moneda??BONOS_REF.find(b=>b.t===sym)?.m??'ARS';
-      return`<tr><td><strong>${sym}</strong></td><td style="color:#6B7280;font-size:12px">${desc}</td><td style="text-align:right">${mon==='USD'?'U$S ':' $'}${fmt(p,2)}</td><td style="text-align:right;color:${varColor(v)};font-weight:600">${fmtP(v)}</td><td style="text-align:right;font-size:11px;color:#6B7280">${mon}</td></tr>`;
-    }).join('');
-    buildTbl('tbodyBon','tblBon','bonLoading',rows);
-  } else {
-    const rows=BONOS_REF.map(b=>`<tr><td><strong>${b.t}</strong></td><td style="color:#6B7280;font-size:12px">${b.n}</td><td style="text-align:right;color:#D1D5DB">—</td><td style="text-align:right;color:#D1D5DB">—</td><td style="text-align:right;font-size:11px;color:#6B7280">${b.m}</td></tr>`).join('');
-    buildTbl('tbodyBon','tblBon','bonLoading',rows);
-    document.getElementById('updBon').textContent='BYMA Data no disponible en este momento · Tickers de referencia · '+now.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
-  }
-}
-
-async function loadCedears(){
-  document.getElementById('cedLoading').style.display='block';
-  document.getElementById('tblCed').style.display='none';
-  const data=await safeGet('https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/seriesHistoricas/cedears');
-  const now=new Date();
-  document.getElementById('updCed').textContent='BYMA Data · '+now.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
-  if(data&&Array.isArray(data)&&data.length){
-    const rows=data.slice(0,25).map(d=>{
-      const v=d.variacionPorcentual??d.variation??null;
-      const p=d.ultimoPrecio??d.price??d.last??null;
-      const sym=d.simbolo??d.symbol??'—';
-      const desc=d.descripcion??d.description??CEDEARS_REF.find(c=>c.t===sym)?.n??'—';
-      const ratio=CEDEARS_REF.find(c=>c.t===sym)?.r??'—';
-      return`<tr><td><strong>${sym}</strong></td><td style="color:#6B7280">${desc}</td><td style="text-align:right">$${fmt(p)}</td><td style="text-align:right;color:${varColor(v)};font-weight:600">${fmtP(v)}</td><td style="text-align:right;color:#9CA3AF">${ratio}</td></tr>`;
-    }).join('');
-    buildTbl('tbodyCed','tblCed','cedLoading',rows);
-  } else {
-    const rows=CEDEARS_REF.map(c=>`<tr><td><strong>${c.t}</strong></td><td style="color:#6B7280">${c.n}</td><td style="text-align:right;color:#D1D5DB">—</td><td style="text-align:right;color:#D1D5DB">—</td><td style="text-align:right;color:#9CA3AF">${c.r}</td></tr>`).join('');
-    buildTbl('tbodyCed','tblCed','cedLoading',rows);
-    document.getElementById('updCed').textContent='BYMA Data no disponible en este momento · Tickers de referencia · '+now.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
-  }
-}
-
+// ── CARGA DE MERCADO CON PROXY ────────────────────────────────
 async function loadDivisas(){
   const [dolares,riesgo,merval,uva,pfTasa]=await Promise.all([
-    safeGet('https://dolarapi.com/v1/dolares'),
-    safeGet('https://api.argentinadatos.com/v1/finanzas/indices/riesgo-pais/ultimo'),
-    safeGet('https://api.argentinadatos.com/v1/finanzas/indices/merval/ultimo'),
-    safeGet('https://api.argentinadatos.com/v1/finanzas/indices/uva/ultimo'),
-    safeGet('https://api.argentinadatos.com/v1/finanzas/tasas/plazoFijo/ultimo'),
+    proxiedGet('https://dolarapi.com/v1/dolares'),
+    proxiedGet('https://api.argentinadatos.com/v1/finanzas/indices/riesgo-pais/ultimo'),
+    proxiedGet('https://api.argentinadatos.com/v1/finanzas/indices/merval/ultimo'),
+    proxiedGet('https://api.argentinadatos.com/v1/finanzas/indices/uva/ultimo'),
+    proxiedGet('https://api.argentinadatos.com/v1/finanzas/tasas/plazoFijo/ultimo'),
   ]);
   let oficial=null,blue=null,mep=null,ccl=null;
-  if(dolares&&Array.isArray(dolares)){
-    oficial=dolares.find(d=>d.casa==='oficial');
-    blue=dolares.find(d=>d.casa==='blue');
-    mep=dolares.find(d=>d.casa==='bolsa');
-    ccl=dolares.find(d=>d.casa==='contadoconliqui');
-  }
+  if(dolares&&Array.isArray(dolares)){oficial=dolares.find(d=>d.casa==='oficial');blue=dolares.find(d=>d.casa==='blue');mep=dolares.find(d=>d.casa==='bolsa');ccl=dolares.find(d=>d.casa==='contadoconliqui');}
   const mk=(lbl,icon,v,c)=>`<div class="mc"><div class="mc-l"><i class="ti ${icon}"></i> ${lbl}</div><div class="mc-v">${v?'$'+fmt(v):'—'}</div><div class="mc-s">Compra $${fmt(c)} · Venta $${fmt(v)}</div></div>`;
   document.getElementById('gridDolar').innerHTML=mk('Oficial','ti-building-bank',oficial?.venta,oficial?.compra)+mk('Blue','ti-currency-dollar',blue?.venta,blue?.compra)+mk('MEP','ti-chart-line',mep?.venta,mep?.compra)+mk('CCL','ti-world',ccl?.venta,ccl?.compra);
   const ofV=oficial?.venta;
@@ -510,39 +324,73 @@ async function loadDivisas(){
     const bM=mep?.venta?((mep.venta/ofV)-1)*100:null;
     const bC=ccl?.venta?((ccl.venta/ofV)-1)*100:null;
     const maxB=Math.max(bB||0,bM||0,bC||0,5);
-    const bRow=(name,val)=>{
-      if(!val)return'';
-      const p=Math.min((val/maxB)*100,100);
-      const col=val>50?'#DC2626':val>20?'#D97706':'#059669';
-      return`<div class="br-row"><span class="br-n">${name}</span><div class="br-t"><div class="br-f" style="width:${p.toFixed(0)}%;background:${col}"></div></div><span class="br-v" style="color:${col}">+${val.toFixed(1)}%</span></div>`;
-    };
-    document.getElementById('brechas').innerHTML=bRow('Blue',bB)+bRow('MEP',bM)+bRow('CCL',bC)+`<div style="font-size:11px;color:#9CA3AF;margin-top:8px">Brecha vs. dólar oficial ($${fmt(ofV)})</div>`;
-  }
+    const bRow=(name,val)=>{if(!val)return'';const p=Math.min((val/maxB)*100,100);const col=val>50?'#DC2626':val>20?'#D97706':'#059669';return`<div class="br-row"><span class="br-n">${name}</span><div class="br-t"><div class="br-f" style="width:${p.toFixed(0)}%;background:${col}"></div></div><span class="br-v" style="color:${col}">+${val.toFixed(1)}%</span></div>`;};
+    document.getElementById('brechas').innerHTML=bRow('Blue',bB)+bRow('MEP',bM)+bRow('CCL',bC)+`<div style="font-size:11px;color:#9CA3AF;margin-top:8px">Vs. dólar oficial ($${fmt(ofV)})</div>`;
+  } else {document.getElementById('brechas').innerHTML='<div style="font-size:12px;color:#9CA3AF;padding:8px">Sin datos disponibles</div>';}
   const mV=merval?.valor??(Array.isArray(merval)?merval[merval.length-1]?.valor:null);
   const rV=riesgo?.valor??(Array.isArray(riesgo)?riesgo[riesgo.length-1]?.valor:null);
   const uV=uva?.valor??(Array.isArray(uva)?uva[uva.length-1]?.valor:null);
-  document.getElementById('indices').innerHTML=`
-    <div class="ta-r"><div><div class="ta-n">Merval</div><div class="ta-d">Índice (ARS)</div></div><div class="ta-v">${mV?'$'+fmt(mV):'—'}</div></div>
-    <div class="ta-r"><div><div class="ta-n">Riesgo país</div><div class="ta-d">EMBI+ Argentina</div></div><div class="ta-v" style="color:${rV>1000?'#DC2626':rV>600?'#D97706':'#059669'}">${rV?fmt(rV)+' pb':'—'}</div></div>
-    <div class="ta-r"><div><div class="ta-n">UVA</div><div class="ta-d">Unidad de Valor Adquisitivo</div></div><div class="ta-v">${uV?'$'+fmt(uV,2):'—'}</div></div>`;
+  document.getElementById('indices').innerHTML=`<div class="ta-r"><div><div class="ta-n">Merval</div><div class="ta-d">Índice (ARS)</div></div><div class="ta-v">${mV?'$'+fmt(mV):'—'}</div></div><div class="ta-r"><div><div class="ta-n">Riesgo país</div><div class="ta-d">EMBI+</div></div><div class="ta-v" style="color:${rV>1000?'#DC2626':rV>600?'#D97706':'#059669'}">${rV?fmt(rV)+' pb':'—'}</div></div><div class="ta-r"><div><div class="ta-n">UVA</div><div class="ta-d">Ajuste CER</div></div><div class="ta-v">${uV?'$'+fmt(uV,2):'—'}</div></div>`;
   const pfV=pfTasa?.tna??(Array.isArray(pfTasa)?pfTasa[pfTasa.length-1]?.tna:null);
   const tea=pfV?((Math.pow(1+pfV/100/365,365)-1)*100):null;
-  document.getElementById('tasas').innerHTML=`
-    <div class="ta-r"><div><div class="ta-n">Plazo fijo TNA</div><div class="ta-d">Promedio bancos privados (BCRA)</div></div><div class="ta-v">${pfV?pfV.toFixed(1)+'%':'—'}</div></div>
-    <div class="ta-r"><div><div class="ta-n">Plazo fijo TEA</div><div class="ta-d">Tasa efectiva anual equivalente</div></div><div class="ta-v">${tea?tea.toFixed(1)+'%':'—'}</div></div>
-    <div class="ta-r"><div><div class="ta-n">UVA</div><div class="ta-d">Ajuste CER / inflación</div></div><div class="ta-v">${uV?'$'+fmt(uV,2):'—'}</div></div>
-    <div class="ta-r"><div><div class="ta-n">Caución 24hs ARS / TAMAR</div><div class="ta-d">BYMA · BCRA (requiere suscripción)</div></div><div class="ta-v" style="color:#9CA3AF">Carga manual</div></div>`;
+  document.getElementById('tasas').innerHTML=`<div class="ta-r"><div><div class="ta-n">Plazo fijo TNA</div><div class="ta-d">Promedio bancos privados</div></div><div class="ta-v">${pfV?pfV.toFixed(1)+'%':'—'}</div></div><div class="ta-r"><div><div class="ta-n">Plazo fijo TEA</div><div class="ta-d">Tasa efectiva anual</div></div><div class="ta-v">${tea?tea.toFixed(1)+'%':'—'}</div></div><div class="ta-r"><div><div class="ta-n">UVA</div><div class="ta-d">Unidad de Valor Adquisitivo</div></div><div class="ta-v">${uV?'$'+fmt(uV,2):'—'}</div></div><div class="ta-r"><div><div class="ta-n">Caución 24hs / TAMAR</div><div class="ta-d">BYMA · BCRA</div></div><div class="ta-v" style="color:#9CA3AF">Carga manual</div></div>`;
   const now=new Date();
   document.getElementById('srcNote').textContent=`dolarapi.com · argentinadatos.com · ${now.toLocaleDateString('es-AR')} ${now.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'})}`;
+}
+
+async function loadAcciones(){
+  document.getElementById('accLoading').style.display='block';
+  document.getElementById('tblAcc').style.display='none';
+  const data=await proxiedGet('https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/seriesHistoricas/panelLider');
+  const now=new Date();
+  document.getElementById('updAcc').textContent='BYMA Data · '+now.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
+  if(data&&Array.isArray(data)&&data.length){
+    const rows=data.slice(0,25).map(d=>{const v=d.variacionPorcentual??d.variation??null;const p=d.ultimoPrecio??d.price??d.last??null;const vol=d.volumen??d.volume??null;const sym=d.simbolo??d.symbol??'—';const desc=d.descripcion??d.description??ACCIONES_REF.find(a=>a.t===sym)?.n??'—';return`<tr><td><strong>${sym}</strong></td><td style="color:#6B7280">${desc}</td><td style="text-align:right">$${fmt(p)}</td><td style="text-align:right;color:${varColor(v)};font-weight:600">${fmtP(v)}</td><td style="text-align:right;color:#9CA3AF">${vol?fmt(vol):'—'}</td></tr>`;}).join('');
+    buildTbl('tbodyAcc','tblAcc','accLoading',rows);
+  } else {
+    buildTbl('tbodyAcc','tblAcc','accLoading',ACCIONES_REF.map(a=>`<tr><td><strong>${a.t}</strong></td><td style="color:#6B7280">${a.n}</td><td style="text-align:right;color:#D1D5DB">—</td><td style="text-align:right;color:#D1D5DB">—</td><td style="text-align:right;color:#D1D5DB">—</td></tr>`).join(''));
+    document.getElementById('updAcc').textContent='BYMA no disponible · Tickers de referencia · '+now.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
+  }
+}
+
+async function loadBonos(){
+  document.getElementById('bonLoading').style.display='block';
+  document.getElementById('tblBon').style.display='none';
+  const data=await proxiedGet('https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/seriesHistoricas/bonos-publicos');
+  const now=new Date();
+  document.getElementById('updBon').textContent='BYMA Data · '+now.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
+  if(data&&Array.isArray(data)&&data.length){
+    const rows=data.slice(0,20).map(d=>{const v=d.variacionPorcentual??d.variation??null;const p=d.ultimoPrecio??d.price??d.last??null;const sym=d.simbolo??d.symbol??'—';const desc=d.descripcion??d.description??BONOS_REF.find(b=>b.t===sym)?.n??'—';const mon=d.moneda??BONOS_REF.find(b=>b.t===sym)?.m??'ARS';return`<tr><td><strong>${sym}</strong></td><td style="color:#6B7280;font-size:12px">${desc}</td><td style="text-align:right">${mon==='USD'?'U$S ':' $'}${fmt(p,2)}</td><td style="text-align:right;color:${varColor(v)};font-weight:600">${fmtP(v)}</td><td style="text-align:right;font-size:11px;color:#6B7280">${mon}</td></tr>`;}).join('');
+    buildTbl('tbodyBon','tblBon','bonLoading',rows);
+  } else {
+    buildTbl('tbodyBon','tblBon','bonLoading',BONOS_REF.map(b=>`<tr><td><strong>${b.t}</strong></td><td style="color:#6B7280;font-size:12px">${b.n}</td><td style="text-align:right;color:#D1D5DB">—</td><td style="text-align:right;color:#D1D5DB">—</td><td style="text-align:right;color:#6B7280">${b.m}</td></tr>`).join(''));
+    document.getElementById('updBon').textContent='BYMA no disponible · Tickers de referencia · '+now.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
+  }
+}
+
+async function loadCedears(){
+  document.getElementById('cedLoading').style.display='block';
+  document.getElementById('tblCed').style.display='none';
+  const data=await proxiedGet('https://open.bymadata.com.ar/vanoms-be-core/rest/api/bymadata/free/bnown/seriesHistoricas/cedears');
+  const now=new Date();
+  document.getElementById('updCed').textContent='BYMA Data · '+now.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
+  if(data&&Array.isArray(data)&&data.length){
+    const rows=data.slice(0,25).map(d=>{const v=d.variacionPorcentual??d.variation??null;const p=d.ultimoPrecio??d.price??d.last??null;const sym=d.simbolo??d.symbol??'—';const desc=d.descripcion??d.description??CEDEARS_REF.find(c=>c.t===sym)?.n??'—';const ratio=CEDEARS_REF.find(c=>c.t===sym)?.r??'—';return`<tr><td><strong>${sym}</strong></td><td style="color:#6B7280">${desc}</td><td style="text-align:right">$${fmt(p)}</td><td style="text-align:right;color:${varColor(v)};font-weight:600">${fmtP(v)}</td><td style="text-align:right;color:#9CA3AF">${ratio}</td></tr>`;}).join('');
+    buildTbl('tbodyCed','tblCed','cedLoading',rows);
+  } else {
+    buildTbl('tbodyCed','tblCed','cedLoading',CEDEARS_REF.map(c=>`<tr><td><strong>${c.t}</strong></td><td style="color:#6B7280">${c.n}</td><td style="text-align:right;color:#D1D5DB">—</td><td style="text-align:right;color:#D1D5DB">—</td><td style="text-align:right;color:#9CA3AF">${c.r}</td></tr>`).join(''));
+    document.getElementById('updCed').textContent='BYMA no disponible · Tickers de referencia · '+now.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
+  }
 }
 
 async function loadAllMkt(){
   document.getElementById('updTime').textContent='Actualizando mercado...';
   await Promise.all([loadDivisas(),loadAcciones(),loadBonos(),loadCedears()]);
   const now=new Date();
-  document.getElementById('updTime').textContent=`Datos al ${now.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'})}`;
+  document.getElementById('updTime').textContent='Datos al '+now.toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
 }
 
+// ── INIT ──────────────────────────────────────────────────────
 const sel=document.getElementById('cs');
 CLT.forEach((c,i)=>{const o=document.createElement('option');o.value=i;o.textContent=c.n;sel.appendChild(o);});
 buildClientTbl();
