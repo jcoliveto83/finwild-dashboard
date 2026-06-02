@@ -9,7 +9,7 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#F3F4F6;color:#111827;min-height:100vh}
-.app{max-width:1100px;margin:0 auto;background:#fff;min-height:100vh;display:flex;flex-direction:column}
+.app{max-width:1200px;margin:0 auto;background:#fff;min-height:100vh;display:flex;flex-direction:column}
 .hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;border-bottom:1px solid #E5E7EB;background:#fff;flex-wrap:wrap;gap:8px;position:sticky;top:0;z-index:100;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
 .logo{font-size:18px;font-weight:700;color:#111827}.logo span{color:#16C784}
 .logo-sub{font-size:11px;color:#6B7280;margin-top:2px}
@@ -17,11 +17,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;ba
 .live-dot{width:7px;height:7px;border-radius:50%;background:#16C784;animation:blink 2s infinite;flex-shrink:0}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
 .live-txt{font-size:11px;color:#6B7280}
-select{font-size:12px;padding:6px 10px;border-radius:8px;border:1px solid #D1D5DB;background:#F9FAFB;color:#111827;cursor:pointer;max-width:200px}
-.btn{font-size:12px;padding:6px 12px;border-radius:8px;border:1px solid #D1D5DB;background:#F9FAFB;color:#374151;cursor:pointer;display:inline-flex;align-items:center;gap:5px}
+select{font-size:12px;padding:6px 10px;border-radius:8px;border:1px solid #D1D5DB;background:#F9FAFB;color:#111827;cursor:pointer;max-width:210px}
+.btn{font-size:12px;padding:6px 12px;border-radius:8px;border:1px solid #D1D5DB;background:#F9FAFB;color:#374151;cursor:pointer;display:inline-flex;align-items:center;gap:5px;text-decoration:none}
 .btn:hover{background:#E5E7EB}
-.btn-g{background:#16C784;color:#fff;border-color:#16C784}
-.btn-g:hover{background:#059669;border-color:#059669}
+.btn-g{background:#16C784;color:#fff;border-color:#16C784}.btn-g:hover{background:#059669;border-color:#059669}
 .tabs{display:flex;border-bottom:1px solid #E5E7EB;background:#fff;overflow-x:auto;position:sticky;top:65px;z-index:99}
 .tab{font-size:13px;padding:10px 18px;cursor:pointer;border-bottom:2px solid transparent;color:#6B7280;white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:6px}
 .tab:hover{color:#374151;background:#F9FAFB}
@@ -31,9 +30,8 @@ select{font-size:12px;padding:6px 10px;border-radius:8px;border:1px solid #D1D5D
 .sec{font-size:11px;font-weight:600;color:#6B7280;letter-spacing:.5px;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:6px}
 .sec::before{content:"";display:inline-block;width:3px;height:12px;background:#16C784;border-radius:2px;flex-shrink:0}
 .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
-.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
 .g2{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px}
-@media(max-width:700px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}.g2{grid-template-columns:1fr}}
+@media(max-width:700px){.g4{grid-template-columns:repeat(2,1fr)}.g2{grid-template-columns:1fr}}
 .mc{background:#F9FAFB;border-radius:10px;padding:14px 16px;border:1px solid #F3F4F6}
 .mc-l{font-size:11px;color:#6B7280;margin-bottom:5px;display:flex;align-items:center;gap:5px}
 .mc-v{font-size:22px;font-weight:700;color:#111827;line-height:1.1}
@@ -56,8 +54,9 @@ select{font-size:12px;padding:6px 10px;border-radius:8px;border:1px solid #D1D5D
 .br-f{height:6px;border-radius:4px;transition:width .5s}
 .br-v{font-size:12px;font-weight:700;width:50px;text-align:right;flex-shrink:0}
 .mkt-tbl{width:100%;border-collapse:collapse;font-size:13px}
-.mkt-tbl th{text-align:left;padding:8px 10px;background:#F9FAFB;color:#6B7280;font-weight:600;font-size:11px;border-bottom:1px solid #E5E7EB}
-.mkt-tbl td{padding:8px 10px;border-bottom:1px solid #F9FAFB;color:#111827}
+.mkt-tbl th{text-align:left;padding:9px 12px;background:#F9FAFB;color:#6B7280;font-weight:600;font-size:11px;border-bottom:1px solid #E5E7EB;white-space:nowrap}
+.mkt-tbl td{padding:9px 12px;border-bottom:1px solid #F9FAFB;color:#111827;vertical-align:middle}
+.mkt-tbl tr:last-child td{border-bottom:none}
 .mkt-tbl tr:hover td{background:#F9FAFB}
 .tbl-wrap{overflow-x:auto;border-radius:8px;border:1px solid #E5E7EB}
 .ta-r{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid #F3F4F6}
@@ -72,12 +71,22 @@ select{font-size:12px;padding:6px 10px;border-radius:8px;border:1px solid #D1D5D
 .search-wrap input:focus{border-color:#16C784;box-shadow:0 0 0 3px rgba(22,199,132,0.1)}
 .spin{animation:spin 1s linear infinite;display:inline-block}
 @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
-.ldg{font-size:13px;color:#9CA3AF;padding:24px;text-align:center}
+.ldg{font-size:13px;color:#9CA3AF;padding:32px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px}
+.ldg i{font-size:24px}
 .ins-box{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:14px;margin-bottom:12px;font-size:13px;color:#065F46;line-height:1.7}
 .upd{font-size:10px;color:#9CA3AF;text-align:right;margin-top:8px}
-.src-badge{display:inline-flex;align-items:center;gap:4px;font-size:10px;padding:2px 7px;border-radius:10px;background:#D1FAE5;color:#065F46;font-weight:600;margin-left:6px}
-.info-box{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:10px 14px;font-size:12px;color:#1E40AF;margin-bottom:14px;display:flex;align-items:flex-start;gap:8px}
+.info-box{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:12px 14px;font-size:12px;color:#1E40AF;margin-bottom:14px;display:flex;align-items:flex-start;gap:8px}
+.warn-box{background:#FEF3C7;border:1px solid #FCD34D;border-radius:8px;padding:12px 14px;font-size:12px;color:#92400E;margin-bottom:14px;display:flex;align-items:flex-start;gap:8px}
+.err-box{background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:12px 14px;font-size:12px;color:#991B1B;margin-bottom:14px;display:flex;align-items:flex-start;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:2px 8px;border-radius:12px;font-weight:600;margin-left:6px}
+.chip-g{background:#D1FAE5;color:#065F46}
+.chip-b{background:#DBEAFE;color:#1E40AF}
+.chip-y{background:#FEF3C7;color:#92400E}
 .footer{border-top:1px solid #E5E7EB;padding:14px 24px;font-size:11px;color:#9CA3AF;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:auto}
+/* Var badge */
+.vpos{color:#059669;font-weight:700}
+.vneg{color:#DC2626;font-weight:700}
+.ticker-badge{display:inline-block;background:#F3F4F6;border-radius:4px;padding:2px 6px;font-weight:700;font-size:12px;font-family:monospace}
 </style>
 </head>
 <body>
@@ -92,17 +101,17 @@ select{font-size:12px;padding:6px 10px;border-radius:8px;border:1px solid #D1D5D
     <div class="live-dot"></div>
     <span class="live-txt" id="updTime">Cargando...</span>
     <select id="cs" onchange="updClient()"></select>
-    <button class="btn btn-g" onclick="loadAllMkt()"><i class="ti ti-refresh"></i> Actualizar mercado</button>
+    <button class="btn btn-g" onclick="loadAllMkt()"><i class="ti ti-refresh"></i> Actualizar</button>
   </div>
 </div>
 
 <div class="tabs">
   <div class="tab active" onclick="showTab('cartera',this)"><i class="ti ti-wallet"></i> Cartera</div>
-  <div class="tab" onclick="showTab('divisas',this)"><i class="ti ti-currency-dollar"></i> Divisas y macro</div>
+  <div class="tab" onclick="showTab('divisas',this)"><i class="ti ti-currency-dollar"></i> Divisas</div>
   <div class="tab" onclick="showTab('acciones',this)"><i class="ti ti-chart-candle"></i> Acciones</div>
   <div class="tab" onclick="showTab('bonos',this)"><i class="ti ti-building-bank"></i> Bonos</div>
   <div class="tab" onclick="showTab('cedears',this)"><i class="ti ti-world"></i> CEDEARs</div>
-  <div class="tab" onclick="showTab('clientes',this)"><i class="ti ti-users"></i> Todos los clientes</div>
+  <div class="tab" onclick="showTab('clientes',this)"><i class="ti ti-users"></i> Clientes</div>
 </div>
 
 <!-- CARTERA -->
@@ -116,10 +125,10 @@ select{font-size:12px;padding:6px 10px;border-radius:8px;border:1px solid #D1D5D
   <div class="card"><div class="ct"><i class="ti ti-chart-line"></i> Evolución patrimonial</div><div style="position:relative;width:100%;height:180px"><canvas id="evolC"></canvas></div></div>
   <div class="g2">
     <div class="card" style="margin-bottom:0"><div class="ct"><i class="ti ti-chart-donut"></i> Composición</div><div class="leg" id="compLeg"></div><div style="position:relative;width:100%;height:160px"><canvas id="compC"></canvas></div></div>
-    <div class="card" style="margin-bottom:0"><div class="ct"><i class="ti ti-shield"></i> Indicadores de riesgo</div>
+    <div class="card" style="margin-bottom:0"><div class="ct"><i class="ti ti-shield"></i> Riesgo</div>
       <div class="mc" style="margin-bottom:10px"><div class="mc-l">Mayor posición</div><div class="mc-v" id="rM">—</div><div class="mc-s" id="rMN">—</div></div>
-      <div class="mc" style="margin-bottom:10px"><div class="mc-l">Top 3 activos</div><div class="mc-v" id="rT3">—</div><div class="mc-s">Concentración</div></div>
-      <div class="mc"><div class="mc-l">Activos totales</div><div class="mc-v" id="rA">—</div><div class="mc-s">Diversificación</div></div>
+      <div class="mc" style="margin-bottom:10px"><div class="mc-l">Top 3 activos</div><div class="mc-v" id="rT3">—</div></div>
+      <div class="mc"><div class="mc-l">Activos totales</div><div class="mc-v" id="rA">—</div></div>
     </div>
   </div>
   <div style="margin-bottom:14px"></div>
@@ -129,67 +138,75 @@ select{font-size:12px;padding:6px 10px;border-radius:8px;border:1px solid #D1D5D
 
 <!-- DIVISAS -->
 <div id="tab-divisas" class="tab-panel">
-  <div class="info-box"><i class="ti ti-info-circle" style="flex-shrink:0;font-size:16px"></i><span>Dólar, Merval, riesgo país y tasas se actualizan automáticamente desde <strong>dolarapi.com</strong> y <strong>argentinadatos.com</strong>. Hacé clic en "Actualizar mercado" para refrescar.</span></div>
   <div class="sec"><i class="ti ti-currency-dollar"></i> Tipos de cambio — tiempo real</div>
   <div class="g4" id="gridDolar">
-    <div class="mc"><div class="mc-l">Oficial</div><div class="mc-v"><span class="spin"><i class="ti ti-loader"></i></span></div></div>
-    <div class="mc"><div class="mc-l">Blue</div><div class="mc-v"><span class="spin"><i class="ti ti-loader"></i></span></div></div>
-    <div class="mc"><div class="mc-l">MEP</div><div class="mc-v"><span class="spin"><i class="ti ti-loader"></i></span></div></div>
-    <div class="mc"><div class="mc-l">CCL</div><div class="mc-v"><span class="spin"><i class="ti ti-loader"></i></span></div></div>
+    <div class="mc"><div class="mc-l">Oficial</div><div class="mc-v"><span class="spin"><i class="ti ti-loader-2"></i></span></div></div>
+    <div class="mc"><div class="mc-l">Blue</div><div class="mc-v"><span class="spin"><i class="ti ti-loader-2"></i></span></div></div>
+    <div class="mc"><div class="mc-l">MEP</div><div class="mc-v"><span class="spin"><i class="ti ti-loader-2"></i></span></div></div>
+    <div class="mc"><div class="mc-l">CCL</div><div class="mc-v"><span class="spin"><i class="ti ti-loader-2"></i></span></div></div>
   </div>
   <div class="g2">
-    <div class="card" style="margin-bottom:0"><div class="ct"><i class="ti ti-chart-bar"></i> Brechas vs. oficial</div><div id="brechas"><div class="ldg"><span class="spin"><i class="ti ti-loader"></i></span></div></div></div>
-    <div class="card" style="margin-bottom:0"><div class="ct"><i class="ti ti-trending-up"></i> Índices macro</div><div id="indices"><div class="ldg"><span class="spin"><i class="ti ti-loader"></i></span></div></div></div>
+    <div class="card" style="margin-bottom:0"><div class="ct"><i class="ti ti-chart-bar"></i> Brechas vs. oficial</div><div id="brechas"><div class="ldg"><span class="spin"><i class="ti ti-loader-2"></i></span></div></div></div>
+    <div class="card" style="margin-bottom:0"><div class="ct"><i class="ti ti-trending-up"></i> Índices macro</div><div id="indices"><div class="ldg"><span class="spin"><i class="ti ti-loader-2"></i></span></div></div></div>
   </div>
   <div style="margin-bottom:14px"></div>
-  <div class="card"><div class="ct"><i class="ti ti-percentage"></i> Tasas de referencia</div><div id="tasas"><div class="ldg"><span class="spin"><i class="ti ti-loader"></i></span></div></div><div class="upd" id="srcNote">dolarapi.com · argentinadatos.com</div></div>
+  <div class="card"><div class="ct"><i class="ti ti-percentage"></i> Tasas de referencia</div><div id="tasas"><div class="ldg"><span class="spin"><i class="ti ti-loader-2"></i></span></div></div><div class="upd" id="srcNote">dolarapi.com · argentinadatos.com</div></div>
 </div>
 
 <!-- ACCIONES -->
 <div id="tab-acciones" class="tab-panel">
-  <div class="info-box"><i class="ti ti-info-circle" style="flex-shrink:0;font-size:16px"></i><span>Precios traídos desde tu <strong>Google Sheets</strong> vía GOOGLEFINANCE. Se actualizan automáticamente. <span class="src-badge"><i class="ti ti-table"></i> Google Sheets</span></span></div>
+  <div id="msgAcciones"></div>
   <div class="search-wrap"><input type="text" id="srcAcc" placeholder="Buscar acción... ej: GGAL, YPF, PAMP" oninput="filterTable('tblAcc',this.value)"></div>
   <div class="card" style="margin-bottom:0">
-    <div id="accLoading" class="ldg"><span class="spin"><i class="ti ti-loader"></i></span> Leyendo Google Sheets...</div>
-    <div class="tbl-wrap"><table class="mkt-tbl" id="tblAcc" style="display:none">
-      <thead><tr><th>Ticker</th><th>Empresa</th><th style="text-align:right">Precio ARS</th><th style="text-align:right">Var. % hoy</th></tr></thead>
-      <tbody id="tbodyAcc"></tbody>
-    </table></div>
+    <div class="ct"><i class="ti ti-chart-candle"></i> Acciones — Panel Merval <span class="chip chip-g"><i class="ti ti-table"></i> Google Sheets</span></div>
+    <div id="accLoading" class="ldg"><span class="spin"><i class="ti ti-loader-2" style="font-size:24px"></i></span><span>Leyendo Google Sheets...</span></div>
+    <div class="tbl-wrap" id="wrapAcc" style="display:none">
+      <table class="mkt-tbl" id="tblAcc">
+        <thead><tr><th>Ticker</th><th>Empresa</th><th style="text-align:right">Precio ARS</th><th style="text-align:right">Var. % hoy</th></tr></thead>
+        <tbody id="tbodyAcc"></tbody>
+      </table>
+    </div>
     <div class="upd" id="updAcc"></div>
   </div>
 </div>
 
 <!-- BONOS -->
 <div id="tab-bonos" class="tab-panel">
-  <div class="info-box"><i class="ti ti-info-circle" style="flex-shrink:0;font-size:16px"></i><span>Precios traídos desde tu <strong>Google Sheets</strong>. Actualizalos manualmente 1 vez por semana desde Balanz. <span class="src-badge"><i class="ti ti-table"></i> Google Sheets</span></span></div>
+  <div id="msgBonos"></div>
   <div class="search-wrap"><input type="text" id="srcBon" placeholder="Buscar bono... ej: AL30, GD30, AE38" oninput="filterTable('tblBon',this.value)"></div>
   <div class="card" style="margin-bottom:0">
-    <div id="bonLoading" class="ldg"><span class="spin"><i class="ti ti-loader"></i></span> Leyendo Google Sheets...</div>
-    <div class="tbl-wrap"><table class="mkt-tbl" id="tblBon" style="display:none">
-      <thead><tr><th>Ticker</th><th>Descripción</th><th style="text-align:right">Precio</th><th style="text-align:right">Var. %</th><th style="text-align:right">Moneda</th></tr></thead>
-      <tbody id="tbodyBon"></tbody>
-    </table></div>
+    <div class="ct"><i class="ti ti-building-bank"></i> Bonos soberanos <span class="chip chip-b"><i class="ti ti-table"></i> Google Sheets</span></div>
+    <div id="bonLoading" class="ldg"><span class="spin"><i class="ti ti-loader-2" style="font-size:24px"></i></span><span>Leyendo Google Sheets...</span></div>
+    <div class="tbl-wrap" id="wrapBon" style="display:none">
+      <table class="mkt-tbl" id="tblBon">
+        <thead><tr><th>Ticker</th><th>Descripción</th><th style="text-align:right">Precio</th><th style="text-align:right">Var. %</th><th style="text-align:right">Moneda</th></tr></thead>
+        <tbody id="tbodyBon"></tbody>
+      </table>
+    </div>
     <div class="upd" id="updBon"></div>
   </div>
 </div>
 
 <!-- CEDEARS -->
 <div id="tab-cedears" class="tab-panel">
-  <div class="info-box"><i class="ti ti-info-circle" style="flex-shrink:0;font-size:16px"></i><span>Precio en USD traído automáticamente desde <strong>NASDAQ/NYSE vía GOOGLEFINANCE</strong>. Precio ARS calculado con el MEP de tu planilla. <span class="src-badge"><i class="ti ti-table"></i> Google Sheets</span></span></div>
+  <div id="msgCedears"></div>
   <div class="search-wrap"><input type="text" id="srcCed" placeholder="Buscar CEDEAR... ej: AAPL, MSFT, MELI" oninput="filterTable('tblCed',this.value)"></div>
   <div class="card" style="margin-bottom:0">
-    <div id="cedLoading" class="ldg"><span class="spin"><i class="ti ti-loader"></i></span> Leyendo Google Sheets...</div>
-    <div class="tbl-wrap"><table class="mkt-tbl" id="tblCed" style="display:none">
-      <thead><tr><th>Ticker</th><th>Empresa</th><th style="text-align:right">Precio USD</th><th style="text-align:right">Precio ARS est.</th><th style="text-align:right">Ratio</th></tr></thead>
-      <tbody id="tbodyCed"></tbody>
-    </table></div>
+    <div class="ct"><i class="ti ti-world"></i> CEDEARs <span class="chip chip-b"><i class="ti ti-table"></i> Google Sheets</span></div>
+    <div id="cedLoading" class="ldg"><span class="spin"><i class="ti ti-loader-2" style="font-size:24px"></i></span><span>Leyendo Google Sheets...</span></div>
+    <div class="tbl-wrap" id="wrapCed" style="display:none">
+      <table class="mkt-tbl" id="tblCed">
+        <thead><tr><th>Ticker</th><th>Empresa</th><th style="text-align:right">Precio USD</th><th style="text-align:right">Precio ARS</th><th style="text-align:right">Ratio</th></tr></thead>
+        <tbody id="tbodyCed"></tbody>
+      </table>
+    </div>
     <div class="upd" id="updCed"></div>
   </div>
 </div>
 
 <!-- CLIENTES -->
 <div id="tab-clientes" class="tab-panel">
-  <div class="sec"><i class="ti ti-users"></i> Resumen general — todos los clientes</div>
+  <div class="sec"><i class="ti ti-users"></i> Resumen — todos los clientes</div>
   <div class="card" style="margin-bottom:0">
     <table class="mkt-tbl" style="width:100%">
       <thead><tr><th>Cliente</th><th style="text-align:right">Patrimonio USD</th><th style="text-align:right">Capital inicial</th><th style="text-align:right">Rentabilidad</th><th style="text-align:right">Estado</th></tr></thead>
@@ -199,27 +216,24 @@ select{font-size:12px;padding:6px 10px;border-radius:8px;border:1px solid #D1D5D
 </div>
 
 <div class="footer">
-  <span>© 2026 Finwild S.A. — Sistema de gestión patrimonial</span>
-  <span>dolarapi.com · argentinadatos.com · Google Sheets (GOOGLEFINANCE)</span>
+  <span>© 2026 Finwild S.A.</span>
+  <span>dolarapi.com · argentinadatos.com · Google Sheets (GOOGLEFINANCE + data912)</span>
 </div>
 </div>
 
 <script>
-// ══════════════════════════════════════════════════════════════
-// CONFIGURACIÓN — TU GOOGLE SHEETS
-// ══════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════
+// GOOGLE SHEETS — TU PLANILLA
+// ══════════════════════════════════════════════════════════
 const SHEET_BASE = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSGxCswHZUMxLHjQ16oQowkJfoBzzsZ8LhGeFGRXPLxirvKSpHUn9HJJ5We5qF4p9NzV3G_d2jBx3Mo/pub?output=csv";
+const SHEET_ACCIONES = SHEET_BASE + "&gid=741966291";
+const SHEET_BONOS    = SHEET_BASE + "&gid=1365357813";
+const SHEET_CEDEARS  = SHEET_BASE + "&gid=1843654080";
+const SHEET_MACRO    = SHEET_BASE + "&gid=2004226725";
 
-// GIDs de cada hoja (0=primera hoja publicada; ajustar si cambia el orden)
-// Para obtener el gid: en Google Sheets, clic en la pestaña → la URL muestra #gid=XXXXXX
-const SHEET_ACCIONES = SHEET_BASE + "&gid=741966291"; // hoja ACCIONES
-const SHEET_CEDEARS  = SHEET_BASE + "&gid=1843654080"; // hoja CEDEARS
-const SHEET_BONOS    = SHEET_BASE + "&gid=1365357813"; // hoja BONOS
-const SHEET_MACRO    = SHEET_BASE + "&gid=2004226725"; // hoja MACRO
-
-// ══════════════════════════════════════════════════════════════
-// CLIENTES
-// ══════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════
+// DATOS CLIENTES
+// ══════════════════════════════════════════════════════════
 const MESES=["Dic-25","Ene-26","Feb-26","Mar-26","Abr-26","May-26"];
 const CL=["Bonos","CEDEARs","FCI","Cash"];
 const CC=["#378ADD","#16C784","#EF9F27","#888780"];
@@ -227,7 +241,7 @@ const CLT=[
   {n:"Alejandro Ríos",cap:185000,ev:[185000,190000,195500,200000,206000,210500],comp:[45,30,15,10],mon:[85,15],mp:"28%",mpn:"AL30",t3:"65%",act:7,ins:"Concentración alta en bonos (45%). USD sólido (85%). Diversificar hacia CEDEARs.",trig:[{d:"dy",t:"Desbalanceo bonos",s:"45% supera el rango ideal."},{d:"dg",t:"USD correcto",s:"85% dolarizado."}]},
   {n:"Beatriz Molina",cap:42000,ev:[42000,41200,40500,40000,39700,39500],comp:[60,10,10,20],mon:[55,45],mp:"38%",mpn:"GD30",t3:"72%",act:4,ins:"Resultado negativo -6%. Concentración y ARS elevado. Acción inmediata.",trig:[{d:"dr",t:"Resultado negativo",s:"-6% desde inicio."},{d:"dr",t:"ARS 45%",s:"Dolarizar urgente."}]},
   {n:"Carlos Vega",cap:95000,ev:[95000,98000,101000,104000,106500,108000],comp:[35,40,15,10],mon:[88,12],mp:"22%",mpn:"NVDA",t3:"58%",act:9,ins:"CEDEARs tech lideran. NVDA +18%. Evaluar toma parcial.",trig:[{d:"db",t:"Ganancia NVDA",s:"+18%."},{d:"dg",t:"Diversificación ok",s:"9 activos."}]},
-  {n:"Criscione Maquinarias S.A.",cap:20082929,ev:[20082929,20082929,20082929,20082929,20082929,20082929],comp:[91,0,0,9],mon:[99,1],mp:"91%",mpn:"YM41O",t3:"91%",act:3,ins:"91% en ON YPF CL.41. Vencimiento 08/01/2027. Planificar reinversión.",trig:[{d:"dr",t:"Concentración crítica",s:"91% en un activo."},{d:"dy",t:"Vencimiento 01/2027",s:"Planificar reinversión."}]},
+  {n:"Criscione Maquinarias S.A.",cap:20082929,ev:[20082929,20082929,20082929,20082929,20082929,20082929],comp:[91,0,0,9],mon:[99,1],mp:"91%",mpn:"YM41O",t3:"91%",act:3,ins:"91% en ON YPF CL.41. Vencimiento 08/01/2027. Planificar reinversión urgente.",trig:[{d:"dr",t:"Concentración crítica",s:"91% en un activo."},{d:"dy",t:"Vencimiento 01/2027",s:"Planificar reinversión."}]},
   {n:"Diana Suárez",cap:28000,ev:[28000,28800,29500,30100,30700,31200],comp:[30,35,20,15],mon:[78,22],mp:"20%",mpn:"AAPL",t3:"55%",act:6,ins:"+11,4%. Buena diversificación.",trig:[{d:"dg",t:"Evolución positiva",s:"+11,4%."},{d:"dy",t:"Cash 15%",s:"Evaluar reinvertir."}]},
   {n:"Eduardo Herrera",cap:120000,ev:[120000,124000,128000,132000,135000,138000],comp:[25,45,20,10],mon:[90,10],mp:"25%",mpn:"MSFT",t3:"60%",act:8,ins:"+15%. USD 90%. Mantener.",trig:[{d:"db",t:"Ganancia MSFT",s:"+14%."},{d:"dg",t:"USD óptimo",s:"90%."}]},
   {n:"Fernanda Castro",cap:67000,ev:[67000,68000,69000,70000,70800,71500],comp:[40,30,18,12],mon:[80,20],mp:"24%",mpn:"AL30",t3:"57%",act:7,ins:"+6,7%. Equilibrada.",trig:[{d:"dg",t:"Equilibrio correcto",s:"Dentro de rangos."},{d:"dy",t:"Cash 12%",s:"Posible reinversión."}]},
@@ -247,60 +261,106 @@ const CLT=[
   {n:"Tomás Ibáñez",cap:38000,ev:[38000,38800,39500,40100,40800,41500],comp:[31,36,21,12],mon:[79,21],mp:"21%",mpn:"YPF",t3:"55%",act:6,ins:"+9,2%. Estable.",trig:[{d:"dg",t:"Evolución positiva",s:"6 meses en alza."},{d:"dy",t:"Cash 12%",s:"Posible reinversión."}]},
 ];
 
-// ══════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════
 // HELPERS
-// ══════════════════════════════════════════════════════════════
-const fmt=(n,d=0)=>n==null||isNaN(n)?'—':Number(n).toLocaleString('es-AR',{minimumFractionDigits:d,maximumFractionDigits:d});
+// ══════════════════════════════════════════════════════════
+const fmt=(n,d=0)=>n==null||n===''||isNaN(n)?'—':Number(n).toLocaleString('es-AR',{minimumFractionDigits:d,maximumFractionDigits:d});
 const fmtP=(n,d=1)=>n==null||isNaN(n)?'—':(n>0?'+':'')+Number(n).toFixed(d)+'%';
-const varColor=v=>v==null||isNaN(v)?'#6B7280':v>0?'#059669':'#DC2626';
 const ts=()=>new Date().toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
 let eI,cI;
 
-// Parsear CSV de Google Sheets
+// Parseo robusto de número — maneja formatos en español e inglés
+function parseNum(str) {
+  if (str === null || str === undefined) return NaN;
+  let s = String(str).trim();
+  // Quitar signos de moneda y espacios
+  s = s.replace(/[$USD\s%]/g,'');
+  if (s === '' || s === '—' || s.toLowerCase() === 'n/a' || s.toLowerCase() === '#n/a') return NaN;
+  // Formato argentino: 1.234,56 → quitar puntos de miles, reemplazar coma decimal
+  if (/^\d{1,3}(\.\d{3})+(,\d+)?$/.test(s)) {
+    s = s.replace(/\./g,'').replace(',','.');
+  } else {
+    // Formato inglés o mixto: reemplazar coma decimal si existe
+    s = s.replace(',','.');
+  }
+  return parseFloat(s);
+}
+
+// Parseo CSV robusto — maneja comillas, comas dentro de campos, etc.
 function parseCSV(text) {
-  const lines = text.trim().split('\n');
+  const lines = text.trim().split(/\r?\n/);
   return lines.map(line => {
     const result = [];
     let cur = '', inQ = false;
     for (let i = 0; i < line.length; i++) {
-      if (line[i] === '"') { inQ = !inQ; }
-      else if (line[i] === ',' && !inQ) { result.push(cur.trim()); cur = ''; }
-      else { cur += line[i]; }
+      const ch = line[i];
+      if (ch === '"') {
+        if (inQ && line[i+1] === '"') { cur += '"'; i++; }
+        else inQ = !inQ;
+      } else if (ch === ',' && !inQ) {
+        result.push(cur.trim()); cur = '';
+      } else {
+        cur += ch;
+      }
     }
     result.push(cur.trim());
     return result;
   });
 }
 
-async function fetchSheet(url) {
+async function fetchSheet(url, nombre) {
   try {
-    const r = await fetch(url);
+    const r = await fetch(url + '&t=' + Date.now()); // cache busting
     if (!r.ok) throw new Error('HTTP ' + r.status);
     const text = await r.text();
-    return parseCSV(text);
+    if (!text || text.trim() === '') throw new Error('Respuesta vacía');
+    const rows = parseCSV(text);
+    console.log('[' + nombre + '] Filas recibidas:', rows.length, '| Primera fila:', rows[0]);
+    return rows;
   } catch(e) {
-    console.warn('Sheet fetch failed:', url, e.message);
+    console.error('[' + nombre + '] Error:', e.message);
     return null;
   }
 }
 
 async function safeGet(url) {
-  // Intentar directo primero (funciona en GitHub Pages con CORS abierto)
   try {
     const r = await fetch(url, {headers:{Accept:'application/json'}});
     if (r.ok) return await r.json();
   } catch {}
-  // Fallback: proxy
   try {
-    const r = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`);
+    const r = await fetch('https://api.allorigins.win/raw?url=' + encodeURIComponent(url));
     if (r.ok) return await r.json();
   } catch {}
   return null;
 }
 
-// ══════════════════════════════════════════════════════════════
+function showMsg(id, tipo, texto) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const cls = tipo === 'ok' ? 'info-box' : tipo === 'warn' ? 'warn-box' : 'err-box';
+  const icon = tipo === 'ok' ? 'ti-info-circle' : tipo === 'warn' ? 'ti-alert-triangle' : 'ti-circle-x';
+  el.innerHTML = `<div class="${cls}"><i class="ti ${icon}" style="flex-shrink:0;font-size:16px"></i><span>${texto}</span></div>`;
+}
+
+// Encontrar la primera fila de datos (salteando títulos y headers)
+function findDataStart(rows) {
+  for (let i = 0; i < Math.min(rows.length, 5); i++) {
+    const r = rows[i];
+    if (r[0] && r[0].trim() !== '' &&
+        !r[0].toLowerCase().includes('finwild') &&
+        !r[0].toLowerCase().includes('ticker') &&
+        !r[0].toLowerCase().includes('especie') &&
+        !r[0].toLowerCase().includes('instruccion')) {
+      return i;
+    }
+  }
+  return 2; // fallback
+}
+
+// ══════════════════════════════════════════════════════════
 // CARTERA
-// ══════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════
 function showTab(id,el){
   document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
@@ -341,109 +401,176 @@ function updClient(){
 function buildClientTbl(){
   document.getElementById('clientTbl').innerHTML=CLT.map((c,i)=>{
     const pat=c.ev[c.ev.length-1];const rp=((pat/c.cap)-1)*100;const pos=rp>=0;
-    const estado=rp>10?'🟢 Sólida':rp>0?'🟡 Moderada':'🔴 Riesgosa';
-    return`<tr><td><span class="cl-name" onclick="document.getElementById('cs').value=${i};updClient();showTab('cartera',document.querySelector('.tab'))">${c.n}</span></td><td style="text-align:right;font-weight:600">USD ${fmt(pat)}</td><td style="text-align:right;color:#6B7280">USD ${fmt(c.cap)}</td><td style="text-align:right;font-weight:600;color:${pos?'#059669':'#DC2626'}">${fmtP(rp)}</td><td style="text-align:right;font-size:12px">${estado}</td></tr>`;
+    return`<tr><td><span class="cl-name" onclick="document.getElementById('cs').value=${i};updClient();showTab('cartera',document.querySelector('.tab'))">${c.n}</span></td><td style="text-align:right;font-weight:600">USD ${fmt(pat)}</td><td style="text-align:right;color:#6B7280">USD ${fmt(c.cap)}</td><td style="text-align:right;font-weight:600;color:${pos?'#059669':'#DC2626'}">${fmtP(rp)}</td><td style="text-align:right;font-size:12px">${rp>10?'🟢 Sólida':rp>0?'🟡 Moderada':'🔴 Riesgosa'}</td></tr>`;
   }).join('');
 }
 
-function buildTbl(tbodyId,tblId,ldgId,rows){
-  document.getElementById(ldgId).style.display='none';
-  document.getElementById(tblId).style.display='table';
-  document.getElementById(tbodyId).innerHTML=rows;
-}
 function filterTable(tblId,q){
   document.querySelectorAll('#'+tblId+' tbody tr').forEach(r=>{r.style.display=r.textContent.toLowerCase().includes(q.toLowerCase())?'':'none';});
 }
 
-// ══════════════════════════════════════════════════════════════
-// GOOGLE SHEETS — ACCIONES, BONOS, CEDEARS
-// ══════════════════════════════════════════════════════════════
-async function loadAccionesSheet() {
-  document.getElementById('accLoading').style.display='block';
-  document.getElementById('tblAcc').style.display='none';
-  const data = await fetchSheet(SHEET_ACCIONES);
-  if (data && data.length > 2) {
-    // Fila 0=título, Fila 1=headers, Fila 2+=datos
-    // Columnas: Ticker, Empresa, Mercado, Precio ARS, Var%, Notas
-    const rows = data.slice(2).filter(r => r[0] && r[0] !== '').map(r => {
-      const ticker  = r[0] || '—';
-      const empresa = r[1] || '—';
-      const precio  = parseFloat((r[3]||'').replace(',','.'));
-      const varp    = parseFloat((r[4]||'').replace(',','.').replace('%',''));
-      return `<tr>
-        <td><strong>${ticker}</strong></td>
-        <td style="color:#6B7280">${empresa}</td>
-        <td style="text-align:right">${isNaN(precio)?'—':'$'+fmt(precio,2)}</td>
-        <td style="text-align:right;font-weight:600;color:${varColor(varp)}">${isNaN(varp)?'—':fmtP(varp*100)}</td>
-      </tr>`;
-    }).join('');
-    buildTbl('tbodyAcc','tblAcc','accLoading', rows || '<tr><td colspan="4" style="text-align:center;color:#9CA3AF;padding:16px">Sin datos. Verificá que las fórmulas GOOGLEFINANCE funcionen en tu planilla.</td></tr>');
-    document.getElementById('updAcc').textContent = 'Google Sheets (GOOGLEFINANCE) · ' + ts();
-  } else {
-    buildTbl('tbodyAcc','tblAcc','accLoading','<tr><td colspan="4" style="text-align:center;color:#9CA3AF;padding:16px">No se pudo leer la planilla. Verificá que esté publicada correctamente.</td></tr>');
+// ══════════════════════════════════════════════════════════
+// ACCIONES desde Google Sheets
+// ══════════════════════════════════════════════════════════
+async function loadAcciones() {
+  document.getElementById('accLoading').style.display='flex';
+  document.getElementById('wrapAcc').style.display='none';
+  document.getElementById('msgAcciones').innerHTML='';
+
+  const rows = await fetchSheet(SHEET_ACCIONES, 'ACCIONES');
+
+  if (!rows || rows.length < 3) {
+    document.getElementById('accLoading').style.display='none';
+    showMsg('msgAcciones','err','No se pudo leer la hoja ACCIONES de Google Sheets. Verificá que la planilla esté publicada y que el gid sea correcto (741966291).');
     document.getElementById('updAcc').textContent = 'Error al leer Google Sheets · ' + ts();
+    return;
   }
+
+  const start = findDataStart(rows);
+  const datRows = rows.slice(start).filter(r => r[0] && r[0].trim() !== '' && !r[0].includes('⚠'));
+
+  if (datRows.length === 0) {
+    document.getElementById('accLoading').style.display='none';
+    showMsg('msgAcciones','warn','La hoja ACCIONES está vacía o las fórmulas GOOGLEFINANCE aún no cargaron. Abrí Google Sheets, esperá unos segundos y volvé a intentar.');
+    document.getElementById('updAcc').textContent = 'Sin datos · ' + ts();
+    return;
+  }
+
+  // Columnas: 0=Ticker, 1=Empresa, 2=Mercado, 3=Precio ARS, 4=Var%, 5=Notas
+  const tbody = datRows.map(r => {
+    const ticker  = r[0] || '—';
+    const empresa = r[1] || '—';
+    const precio  = parseNum(r[3]);
+    const varp    = parseNum(r[4]);
+    const pStr    = isNaN(precio) ? '<span style="color:#D1D5DB">Sin dato</span>' : '$' + fmt(precio, 2);
+    const vStr    = isNaN(varp)   ? '<span style="color:#D1D5DB">—</span>'
+                                  : `<span class="${varp>=0?'vpos':'vneg'}">${fmtP(varp*100)}</span>`;
+    return `<tr>
+      <td><span class="ticker-badge">${ticker}</span></td>
+      <td style="color:#6B7280">${empresa}</td>
+      <td style="text-align:right">${pStr}</td>
+      <td style="text-align:right">${vStr}</td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('tbodyAcc').innerHTML = tbody;
+  document.getElementById('accLoading').style.display='none';
+  document.getElementById('wrapAcc').style.display='block';
+  const sinDato = datRows.filter(r => isNaN(parseNum(r[3]))).length;
+  if (sinDato > 0) showMsg('msgAcciones','warn', sinDato + ' acciones sin precio. Las fórmulas GOOGLEFINANCE pueden tardar unos minutos en cargar. Actualizá en un momento.');
+  else showMsg('msgAcciones','ok', datRows.length + ' acciones cargadas desde Google Sheets vía GOOGLEFINANCE.');
+  document.getElementById('updAcc').textContent = 'Google Sheets · ' + ts();
 }
 
-async function loadBonosSheet() {
-  document.getElementById('bonLoading').style.display='block';
-  document.getElementById('tblBon').style.display='none';
-  const data = await fetchSheet(SHEET_BONOS);
-  if (data && data.length > 2) {
-    // Columnas: Ticker, Descripción, Moneda, Precio, Var%, Fecha
-    const rows = data.slice(2).filter(r => r[0] && r[0] !== '').map(r => {
-      const ticker = r[0]||'—';
-      const desc   = r[1]||'—';
-      const mon    = r[2]||'ARS';
-      const precio = parseFloat((r[3]||'').replace(',','.'));
-      const varp   = parseFloat((r[4]||'').replace(',','.').replace('%',''));
-      return `<tr>
-        <td><strong>${ticker}</strong></td>
-        <td style="color:#6B7280;font-size:12px">${desc}</td>
-        <td style="text-align:right">${isNaN(precio)?'—':(mon==='USD'?'U$S ':'$')+fmt(precio,2)}</td>
-        <td style="text-align:right;font-weight:600;color:${varColor(varp)}">${isNaN(varp)?'—':fmtP(varp*100)}</td>
-        <td style="text-align:right;font-size:11px;color:#6B7280">${mon}</td>
-      </tr>`;
-    }).join('');
-    buildTbl('tbodyBon','tblBon','bonLoading', rows || '<tr><td colspan="5" style="text-align:center;color:#9CA3AF;padding:16px">Sin datos de bonos en la planilla.</td></tr>');
-    document.getElementById('updBon').textContent = 'Google Sheets (carga manual desde Balanz) · ' + ts();
-  } else {
-    buildTbl('tbodyBon','tblBon','bonLoading','<tr><td colspan="5" style="text-align:center;color:#9CA3AF;padding:16px">No se pudo leer la planilla.</td></tr>');
-    document.getElementById('updBon').textContent = 'Error al leer Google Sheets · ' + ts();
+// ══════════════════════════════════════════════════════════
+// BONOS desde Google Sheets
+// ══════════════════════════════════════════════════════════
+async function loadBonos() {
+  document.getElementById('bonLoading').style.display='flex';
+  document.getElementById('wrapBon').style.display='none';
+  document.getElementById('msgBonos').innerHTML='';
+
+  const rows = await fetchSheet(SHEET_BONOS, 'BONOS');
+
+  if (!rows || rows.length < 3) {
+    document.getElementById('bonLoading').style.display='none';
+    showMsg('msgBonos','err','No se pudo leer la hoja BONOS. Verificá que el gid sea correcto (1365357813).');
+    document.getElementById('updBon').textContent = 'Error · ' + ts();
+    return;
   }
+
+  const start = findDataStart(rows);
+  const datRows = rows.slice(start).filter(r => r[0] && r[0].trim() !== '' && !r[0].includes('⚠'));
+
+  if (datRows.length === 0) {
+    document.getElementById('bonLoading').style.display='none';
+    showMsg('msgBonos','warn','La hoja BONOS está vacía. Cargá los precios manualmente desde Balanz.');
+    return;
+  }
+
+  // Columnas: 0=Ticker, 1=Desc, 2=Moneda, 3=Precio, 4=Var%, 5=Fecha
+  const tbody = datRows.map(r => {
+    const ticker  = r[0] || '—';
+    const desc    = r[1] || '—';
+    const moneda  = r[2] || 'ARS';
+    const precio  = parseNum(r[3]);
+    const varp    = parseNum(r[4]);
+    const pPrefix = moneda.toUpperCase() === 'USD' ? 'U$S ' : '$';
+    const pStr    = isNaN(precio) ? '<span style="color:#D1D5DB">Sin dato</span>' : pPrefix + fmt(precio, 2);
+    const vStr    = isNaN(varp)   ? '<span style="color:#D1D5DB">—</span>'
+                                  : `<span class="${varp>=0?'vpos':'vneg'}">${fmtP(varp*100)}</span>`;
+    return `<tr>
+      <td><span class="ticker-badge">${ticker}</span></td>
+      <td style="color:#6B7280;font-size:12px">${desc}</td>
+      <td style="text-align:right">${pStr}</td>
+      <td style="text-align:right">${vStr}</td>
+      <td style="text-align:right"><span style="font-size:11px;color:#6B7280">${moneda}</span></td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('tbodyBon').innerHTML = tbody;
+  document.getElementById('bonLoading').style.display='none';
+  document.getElementById('wrapBon').style.display='block';
+  showMsg('msgBonos','ok', datRows.length + ' bonos cargados desde Google Sheets.');
+  document.getElementById('updBon').textContent = 'Google Sheets · ' + ts();
 }
 
-async function loadCedearsSheet() {
-  document.getElementById('cedLoading').style.display='block';
-  document.getElementById('tblCed').style.display='none';
-  const data = await fetchSheet(SHEET_CEDEARS);
-  if (data && data.length > 2) {
-    // Columnas: Ticker, Empresa, Bolsa, Precio USD, Ratio, Dólar MEP, Precio ARS
-    const rows = data.slice(2).filter(r => r[0] && r[0] !== '').map(r => {
-      const ticker  = r[0]||'—';
-      const empresa = r[1]||'—';
-      const pUSD    = parseFloat((r[3]||'').replace(',','.'));
-      const ratio   = r[4]||'—';
-      const pARS    = parseFloat((r[6]||'').replace(',','.'));
-      return `<tr>
-        <td><strong>${ticker}</strong></td>
-        <td style="color:#6B7280">${empresa}</td>
-        <td style="text-align:right">${isNaN(pUSD)?'—':'USD '+fmt(pUSD,2)}</td>
-        <td style="text-align:right;font-weight:600">${isNaN(pARS)?'—':'$'+fmt(pARS,0)}</td>
-        <td style="text-align:right;color:#9CA3AF">${ratio}</td>
-      </tr>`;
-    }).join('');
-    buildTbl('tbodyCed','tblCed','cedLoading', rows || '<tr><td colspan="5" style="text-align:center;color:#9CA3AF;padding:16px">Sin datos de CEDEARs en la planilla.</td></tr>');
-    document.getElementById('updCed').textContent = 'Google Sheets (GOOGLEFINANCE NYSE/NASDAQ) · ' + ts();
-  } else {
-    buildTbl('tbodyCed','tblCed','cedLoading','<tr><td colspan="5" style="text-align:center;color:#9CA3AF;padding:16px">No se pudo leer la planilla.</td></tr>');
-    document.getElementById('updCed').textContent = 'Error al leer Google Sheets · ' + ts();
+// ══════════════════════════════════════════════════════════
+// CEDEARS desde Google Sheets
+// ══════════════════════════════════════════════════════════
+async function loadCedears() {
+  document.getElementById('cedLoading').style.display='flex';
+  document.getElementById('wrapCed').style.display='none';
+  document.getElementById('msgCedears').innerHTML='';
+
+  const rows = await fetchSheet(SHEET_CEDEARS, 'CEDEARS');
+
+  if (!rows || rows.length < 3) {
+    document.getElementById('cedLoading').style.display='none';
+    showMsg('msgCedears','err','No se pudo leer la hoja CEDEARS. Verificá que el gid sea correcto (1843654080).');
+    document.getElementById('updCed').textContent = 'Error · ' + ts();
+    return;
   }
+
+  const start = findDataStart(rows);
+  const datRows = rows.slice(start).filter(r => r[0] && r[0].trim() !== '' && !r[0].includes('⚠'));
+
+  if (datRows.length === 0) {
+    document.getElementById('cedLoading').style.display='none';
+    showMsg('msgCedears','warn','La hoja CEDEARS está vacía o las fórmulas GOOGLEFINANCE aún no cargaron.');
+    return;
+  }
+
+  // Columnas: 0=Ticker, 1=Empresa, 2=Bolsa, 3=Precio USD, 4=Ratio, 5=MEP, 6=Precio ARS
+  const tbody = datRows.map(r => {
+    const ticker  = r[0] || '—';
+    const empresa = r[1] || '—';
+    const pUSD    = parseNum(r[3]);
+    const ratio   = r[4] || '—';
+    const pARS    = parseNum(r[6]);
+    const usdStr  = isNaN(pUSD) ? '<span style="color:#D1D5DB">Sin dato</span>' : 'USD ' + fmt(pUSD, 2);
+    const arsStr  = isNaN(pARS) ? '<span style="color:#D1D5DB">—</span>' : '$' + fmt(pARS, 0);
+    return `<tr>
+      <td><span class="ticker-badge">${ticker}</span></td>
+      <td style="color:#6B7280">${empresa}</td>
+      <td style="text-align:right">${usdStr}</td>
+      <td style="text-align:right;font-weight:600">${arsStr}</td>
+      <td style="text-align:right;color:#9CA3AF;font-size:12px">${ratio}</td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('tbodyCed').innerHTML = tbody;
+  document.getElementById('cedLoading').style.display='none';
+  document.getElementById('wrapCed').style.display='block';
+  const sinDato = datRows.filter(r => isNaN(parseNum(r[3]))).length;
+  if (sinDato > 0) showMsg('msgCedears','warn', sinDato + ' CEDEARs sin precio USD. GOOGLEFINANCE puede tardar unos minutos.');
+  else showMsg('msgCedears','ok', datRows.length + ' CEDEARs cargados desde Google Sheets.');
+  document.getElementById('updCed').textContent = 'Google Sheets · ' + ts();
 }
 
-// ══════════════════════════════════════════════════════════════
-// DIVISAS Y MACRO — dolarapi + argentinadatos (CORS abierto)
-// ══════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════
+// DIVISAS — dolarapi + argentinadatos
+// ══════════════════════════════════════════════════════════
 async function loadDivisas(){
   const [dolares,riesgo,merval,uva,pfTasa]=await Promise.all([
     safeGet('https://dolarapi.com/v1/dolares'),
@@ -453,9 +580,18 @@ async function loadDivisas(){
     safeGet('https://api.argentinadatos.com/v1/finanzas/tasas/plazoFijo/ultimo'),
   ]);
   let oficial=null,blue=null,mep=null,ccl=null;
-  if(dolares&&Array.isArray(dolares)){oficial=dolares.find(d=>d.casa==='oficial');blue=dolares.find(d=>d.casa==='blue');mep=dolares.find(d=>d.casa==='bolsa');ccl=dolares.find(d=>d.casa==='contadoconliqui');}
+  if(dolares&&Array.isArray(dolares)){
+    oficial=dolares.find(d=>d.casa==='oficial');
+    blue=dolares.find(d=>d.casa==='blue');
+    mep=dolares.find(d=>d.casa==='bolsa');
+    ccl=dolares.find(d=>d.casa==='contadoconliqui');
+  }
   const mk=(lbl,icon,v,c)=>`<div class="mc"><div class="mc-l"><i class="ti ${icon}"></i> ${lbl}</div><div class="mc-v">${v?'$'+fmt(v):'—'}</div><div class="mc-s">Compra $${fmt(c)} · Venta $${fmt(v)}</div></div>`;
-  document.getElementById('gridDolar').innerHTML=mk('Oficial','ti-building-bank',oficial?.venta,oficial?.compra)+mk('Blue','ti-currency-dollar',blue?.venta,blue?.compra)+mk('MEP','ti-chart-line',mep?.venta,mep?.compra)+mk('CCL','ti-world',ccl?.venta,ccl?.compra);
+  document.getElementById('gridDolar').innerHTML=
+    mk('Oficial','ti-building-bank',oficial?.venta,oficial?.compra)+
+    mk('Blue','ti-currency-dollar',blue?.venta,blue?.compra)+
+    mk('MEP','ti-chart-line',mep?.venta,mep?.compra)+
+    mk('CCL','ti-world',ccl?.venta,ccl?.compra);
   const ofV=oficial?.venta;
   if(ofV){
     const bB=blue?.venta?((blue.venta/ofV)-1)*100:null;
@@ -464,31 +600,34 @@ async function loadDivisas(){
     const maxB=Math.max(bB||0,bM||0,bC||0,5);
     const bRow=(name,val)=>{if(!val)return'';const p=Math.min((val/maxB)*100,100);const col=val>50?'#DC2626':val>20?'#D97706':'#059669';return`<div class="br-row"><span class="br-n">${name}</span><div class="br-t"><div class="br-f" style="width:${p.toFixed(0)}%;background:${col}"></div></div><span class="br-v" style="color:${col}">+${val.toFixed(1)}%</span></div>`;};
     document.getElementById('brechas').innerHTML=bRow('Blue',bB)+bRow('MEP',bM)+bRow('CCL',bC)+`<div style="font-size:11px;color:#9CA3AF;margin-top:8px">Vs. oficial ($${fmt(ofV)})</div>`;
-  } else {document.getElementById('brechas').innerHTML='<p style="font-size:12px;color:#9CA3AF;padding:8px">Sin datos</p>';}
+  }
   const mV=merval?.valor??(Array.isArray(merval)?merval[merval.length-1]?.valor:null);
   const rV=riesgo?.valor??(Array.isArray(riesgo)?riesgo[riesgo.length-1]?.valor:null);
   const uV=uva?.valor??(Array.isArray(uva)?uva[uva.length-1]?.valor:null);
-  document.getElementById('indices').innerHTML=`<div class="ta-r"><div><div class="ta-n">Merval</div><div class="ta-d">Índice (ARS)</div></div><div class="ta-v">${mV?'$'+fmt(mV):'—'}</div></div><div class="ta-r"><div><div class="ta-n">Riesgo país</div><div class="ta-d">EMBI+</div></div><div class="ta-v" style="color:${rV>1000?'#DC2626':rV>600?'#D97706':'#059669'}">${rV?fmt(rV)+' pb':'—'}</div></div><div class="ta-r"><div><div class="ta-n">UVA</div><div class="ta-d">Ajuste CER</div></div><div class="ta-v">${uV?'$'+fmt(uV,2):'—'}</div></div>`;
+  document.getElementById('indices').innerHTML=`
+    <div class="ta-r"><div><div class="ta-n">Merval</div><div class="ta-d">Índice (ARS)</div></div><div class="ta-v">${mV?'$'+fmt(mV):'—'}</div></div>
+    <div class="ta-r"><div><div class="ta-n">Riesgo país</div><div class="ta-d">EMBI+</div></div><div class="ta-v" style="color:${rV>1000?'#DC2626':rV>600?'#D97706':'#059669'}">${rV?fmt(rV)+' pb':'—'}</div></div>
+    <div class="ta-r"><div><div class="ta-n">UVA</div><div class="ta-d">Ajuste CER</div></div><div class="ta-v">${uV?'$'+fmt(uV,2):'—'}</div></div>`;
   const pfV=pfTasa?.tna??(Array.isArray(pfTasa)?pfTasa[pfTasa.length-1]?.tna:null);
   const tea=pfV?((Math.pow(1+pfV/100/365,365)-1)*100):null;
-  document.getElementById('tasas').innerHTML=`<div class="ta-r"><div><div class="ta-n">Plazo fijo TNA</div><div class="ta-d">Promedio bancos privados</div></div><div class="ta-v">${pfV?pfV.toFixed(1)+'%':'—'}</div></div><div class="ta-r"><div><div class="ta-n">Plazo fijo TEA</div><div class="ta-d">Tasa efectiva anual</div></div><div class="ta-v">${tea?tea.toFixed(1)+'%':'—'}</div></div><div class="ta-r"><div><div class="ta-n">UVA</div><div class="ta-d">Ajuste CER</div></div><div class="ta-v">${uV?'$'+fmt(uV,2):'—'}</div></div><div class="ta-r"><div><div class="ta-n">Caución 24hs / TAMAR</div><div class="ta-d">Actualizar en planilla Google Sheets</div></div><div class="ta-v" style="color:#9CA3AF">Manual</div></div>`;
+  document.getElementById('tasas').innerHTML=`
+    <div class="ta-r"><div><div class="ta-n">Plazo fijo TNA</div><div class="ta-d">Promedio bancos privados</div></div><div class="ta-v">${pfV?pfV.toFixed(1)+'%':'—'}</div></div>
+    <div class="ta-r"><div><div class="ta-n">Plazo fijo TEA</div><div class="ta-d">Tasa efectiva anual</div></div><div class="ta-v">${tea?tea.toFixed(1)+'%':'—'}</div></div>
+    <div class="ta-r"><div><div class="ta-n">UVA</div><div class="ta-d">Ajuste CER</div></div><div class="ta-v">${uV?'$'+fmt(uV,2):'—'}</div></div>
+    <div class="ta-r"><div><div class="ta-n">Caución 24hs / TAMAR</div><div class="ta-d">Ver hoja MACRO en Google Sheets</div></div><div class="ta-v" style="color:#9CA3AF">Manual</div></div>`;
   document.getElementById('srcNote').textContent=`dolarapi.com · argentinadatos.com · ${new Date().toLocaleDateString('es-AR')} ${ts()}`;
 }
 
 async function loadAllMkt(){
   document.getElementById('updTime').textContent='Actualizando...';
-  await Promise.all([loadDivisas(), loadAccionesSheet(), loadBonosSheet(), loadCedearsSheet()]);
+  await Promise.all([loadDivisas(), loadAcciones(), loadBonos(), loadCedears()]);
   document.getElementById('updTime').textContent='Datos al '+ts();
 }
 
-// ══════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════
 // INIT
-// ══════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════
 const sel=document.getElementById('cs');
 CLT.forEach((c,i)=>{const o=document.createElement('option');o.value=i;o.textContent=c.n;sel.appendChild(o);});
 buildClientTbl();
 updClient();
-loadAllMkt();
-</script>
-</body>
-</html>
