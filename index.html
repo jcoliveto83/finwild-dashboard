@@ -309,18 +309,55 @@ function parseCSV(text) {
 }
 
 async function fetchSheet(url, nombre) {
-  try {
-    const r = await fetch(url + '&t=' + Date.now()); // cache busting
-    if (!r.ok) throw new Error('HTTP ' + r.status);
-    const text = await r.text();
-    if (!text || text.trim() === '') throw new Error('Respuesta vacía');
-    const rows = parseCSV(text);
-    console.log('[' + nombre + '] Filas recibidas:', rows.length, '| Primera fila:', rows[0]);
-    return rows;
-  } catch(e) {
-    console.error('[' + nombre + '] Error:', e.message);
-    return null;
+  // Intentamos 3 estrategias en orden hasta que una funcione
+  const urlT = url + '&t=' + Date.now(); // cache busting
+
+  const intentos = [
+    // 1) Directo — funciona cuando se abre el HTML localmente
+    async () => {
+      const r = await fetch(urlT);
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return await r.text();
+    },
+    // 2) allorigins — proxy CORS gratuito más confiable
+    async () => {
+      const r = await fetch('https://api.allorigins.win/raw?url=' + encodeURIComponent(urlT), {cache:'no-store'});
+      if (!r.ok) throw new Error('allorigins HTTP ' + r.status);
+      return await r.text();
+    },
+    // 3) corsproxy.io — backup
+    async () => {
+      const r = await fetch('https://corsproxy.io/?' + encodeURIComponent(urlT), {cache:'no-store'});
+      if (!r.ok) throw new Error('corsproxy HTTP ' + r.status);
+      return await r.text();
+    },
+    // 4) thingproxy — segundo backup
+    async () => {
+      const r = await fetch('https://thingproxy.freeboard.io/fetch/' + urlT, {cache:'no-store'});
+      if (!r.ok) throw new Error('thingproxy HTTP ' + r.status);
+      return await r.text();
+    },
+  ];
+
+  for (let i = 0; i < intentos.length; i++) {
+    try {
+      const text = await intentos[i]();
+      if (!text || text.trim() === '') continue;
+      // Verificar que sea CSV real (no HTML de error)
+      if (text.trim().startsWith('<') && text.includes('<!DOCTYPE')) {
+        console.warn('[' + nombre + '] Intento ' + (i+1) + ' devolvió HTML, no CSV');
+        continue;
+      }
+      const rows = parseCSV(text);
+      console.log('[' + nombre + '] OK vía intento ' + (i+1) + ' — Filas:', rows.length);
+      return rows;
+    } catch(e) {
+      console.warn('[' + nombre + '] Intento ' + (i+1) + ' fallido:', e.message);
+    }
   }
+
+  console.error('[' + nombre + '] Todos los intentos fallaron');
+  return null;
 }
 
 async function safeGet(url) {
